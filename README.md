@@ -169,9 +169,3 @@ Bio-FairAlert/
 
 ---
 
-<div align="center">
-
-Questions about reproducing a specific result? Open an issue or contact the corresponding author.
-
-</div>
-# Bio-FairAlert

@@ -19,8 +19,6 @@ Every number, table, and figure in the manuscript traces back to a script in thi
 
 This repository is the analysis code accompanying the manuscript above, submitted to *Computers & Education: Artificial Intelligence*. It contains the full pipeline for two case studies, **OULAD** (Open University Learning Analytics Dataset) and the **MOOC User Action Dataset**, covering feature engineering, model comparison, fairness auditing, and explainability.
 
-> **AI-usage note.** As disclosed in the manuscript's AI-Usage Disclosure Statement, a generative AI writing tool assisted with the manuscript's narrative text. All code, analysis, and results in this repository are the author's own work, executed against the real, downloaded datasets. Every reported result comes from an actual run of this code.
-
 ## Contents
 
 - [Quick start](#quick-start)

@@ -26,7 +26,6 @@ This repository is the analysis code accompanying the manuscript above, submitte
 - [Project structure](#project-structure)
 - [Script to result mapping](#script-to-result-mapping)
 - [Results archive](#results-archive)
-
 ## Quick start
 
 ```bash

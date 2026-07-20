@@ -1,0 +1,67 @@
+{
+  "cutoff": 21,
+  "selected_features": [
+    "day_max",
+    "num_actions",
+    "day_mean",
+    "day_std",
+    "FEATURE0_mean",
+    "FEATURE1_std",
+    "FEATURE0_max",
+    "FEATURE0_std",
+    "FEATURE2_std",
+    "FEATURE2_mean",
+    "FEATURE3_mean",
+    "FEATURE1_mean"
+  ],
+  "shap_global_importance": [
+    {
+      "feature": "num_actions",
+      "mean_abs_shap": 0.8853789254905166
+    },
+    {
+      "feature": "day_mean",
+      "mean_abs_shap": 0.7735566492224207
+    },
+    {
+      "feature": "day_max",
+      "mean_abs_shap": 0.4784729310317179
+    },
+    {
+      "feature": "FEATURE0_std",
+      "mean_abs_shap": 0.2402465477837317
+    },
+    {
+      "feature": "day_std",
+      "mean_abs_shap": 0.1893544278260313
+    },
+    {
+      "feature": "FEATURE2_std",
+      "mean_abs_shap": 0.15377576400245743
+    },
+    {
+      "feature": "FEATURE2_mean",
+      "mean_abs_shap": 0.14783809277584445
+    },
+    {
+      "feature": "FEATURE0_mean",
+      "mean_abs_shap": 0.14022196133574555
+    },
+    {
+      "feature": "FEATURE3_mean",
+      "mean_abs_shap": 0.1395402447171628
+    },
+    {
+      "feature": "FEATURE1_std",
+      "mean_abs_shap": 0.11228248222980315
+    },
+    {
+      "feature": "FEATURE1_mean",
+      "mean_abs_shap": 0.09985987633224183
+    },
+    {
+      "feature": "FEATURE0_max",
+      "mean_abs_shap": 0.039217240416788895
+    }
+  ]
+}

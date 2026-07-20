@@ -1,0 +1,584 @@
+{
+  "splits": [
+    {
+      "split": 0,
+      "random_state": 100,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7652274479568234,
+          "balanced_accuracy": 0.7546274893894874,
+          "macro_f1": 0.7559408602150538,
+          "disability_di": 0.7862204660124422,
+          "imd_band_di": 0.4682279181264983,
+          "gender_di": 0.8371509097726306,
+          "disability_eqodds": 0.04617451757282265,
+          "imd_band_eqodds": 0.21894803548795938,
+          "gender_eqodds": 0.08747611236526842
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7656129529683886,
+          "balanced_accuracy": 0.7544495784601793,
+          "macro_f1": 0.756034056034056,
+          "disability_di": 0.7907329350759621,
+          "imd_band_di": 0.5551774428779777,
+          "gender_di": 0.8313342280969902,
+          "disability_eqodds": 0.04935248367451758,
+          "imd_band_eqodds": 0.18670785804816226,
+          "gender_eqodds": 0.09701041401624444
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.5967617579028527,
+          "balanced_accuracy": 0.5931504292216396,
+          "macro_f1": 0.5901283637787436,
+          "disability_di": 0.6614732810357138,
+          "imd_band_di": 0.20155951848100073,
+          "gender_di": 0.8207187798718808,
+          "disability_eqodds": 0.22525820255541562,
+          "imd_band_eqodds": 0.6596056488142819,
+          "gender_eqodds": 0.09823920786180723
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7625289128758674,
+          "balanced_accuracy": 0.7507569280405599,
+          "macro_f1": 0.7525466538751308,
+          "disability_di": 0.841747963145379,
+          "imd_band_di": 0.5746393827574638,
+          "gender_di": 0.8903980381060177,
+          "disability_eqodds": 0.024507067848751896,
+          "imd_band_eqodds": 0.1316539923954373,
+          "gender_eqodds": 0.0634820096109947
+        }
+      ]
+    },
+    {
+      "split": 1,
+      "random_state": 101,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.771868978805395,
+          "balanced_accuracy": 0.760291865969468,
+          "macro_f1": 0.762666030579165,
+          "disability_di": 0.8068210130734786,
+          "imd_band_di": 0.4760795454545454,
+          "gender_di": 0.8663892654765493,
+          "disability_eqodds": 0.06332247609224825,
+          "imd_band_eqodds": 0.17787114845938373,
+          "gender_eqodds": 0.07859918002133048
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7676300578034682,
+          "balanced_accuracy": 0.7567989940969226,
+          "macro_f1": 0.7587449994380222,
+          "disability_di": 0.818719678042231,
+          "imd_band_di": 0.5990520675917022,
+          "gender_di": 0.8556974977256242,
+          "disability_eqodds": 0.06678940069632414,
+          "imd_band_eqodds": 0.17912210694333597,
+          "gender_eqodds": 0.08217879551781926
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.594990366088632,
+          "balanced_accuracy": 0.5912147646174877,
+          "macro_f1": 0.5888550239269071,
+          "disability_di": 0.6365722722337573,
+          "imd_band_di": 0.17812499999999998,
+          "gender_di": 0.8870960541668399,
+          "disability_eqodds": 0.2564214925277421,
+          "imd_band_eqodds": 0.6793326026062599,
+          "gender_eqodds": 0.06559423109641449
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.75626204238921,
+          "balanced_accuracy": 0.7434573424367195,
+          "macro_f1": 0.7459630495577807,
+          "disability_di": 0.8266216119573768,
+          "imd_band_di": 0.5910138248847926,
+          "gender_di": 0.885960056776213,
+          "disability_eqodds": 0.04877074476754906,
+          "imd_band_eqodds": 0.13328012769353548,
+          "gender_eqodds": 0.08076080031026212
+        }
+      ]
+    },
+    {
+      "split": 2,
+      "random_state": 102,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7783752640676013,
+          "balanced_accuracy": 0.7676733295154348,
+          "macro_f1": 0.7682379493629172,
+          "disability_di": 0.7609586271794707,
+          "imd_band_di": 0.5007851265624018,
+          "gender_di": 0.8597648902821317,
+          "disability_eqodds": 0.06286390101892292,
+          "imd_band_eqodds": 0.1961759476383127,
+          "gender_eqodds": 0.06404057352043924
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7716535433070866,
+          "balanced_accuracy": 0.7609456688404057,
+          "macro_f1": 0.761348655902321,
+          "disability_di": 0.7750147002729856,
+          "imd_band_di": 0.5491803278688525,
+          "gender_di": 0.8881127309884289,
+          "disability_eqodds": 0.06108078602620082,
+          "imd_band_eqodds": 0.22150642925245456,
+          "gender_eqodds": 0.05822147651006704
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.6036105242942194,
+          "balanced_accuracy": 0.5997091161564846,
+          "macro_f1": 0.5955070591742166,
+          "disability_di": 0.6373970540851253,
+          "imd_band_di": 0.24554973821989529,
+          "gender_di": 0.9179678910544727,
+          "disability_eqodds": 0.2408366384793833,
+          "imd_band_eqodds": 0.5882312242709378,
+          "gender_eqodds": 0.04354105211406095
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7658920683695026,
+          "balanced_accuracy": 0.7521516475463843,
+          "macro_f1": 0.7538872777564972,
+          "disability_di": 0.7497015425156326,
+          "imd_band_di": 0.6092469262295082,
+          "gender_di": 0.9242840059338197,
+          "disability_eqodds": 0.06897743813682677,
+          "imd_band_eqodds": 0.1599969077743706,
+          "gender_eqodds": 0.036866992068334326
+        }
+      ]
+    },
+    {
+      "split": 3,
+      "random_state": 103,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7645472061657033,
+          "balanced_accuracy": 0.7534812521774119,
+          "macro_f1": 0.7551260674995799,
+          "disability_di": 0.7805428872512147,
+          "imd_band_di": 0.5071982281284607,
+          "gender_di": 0.9048943417733263,
+          "disability_eqodds": 0.06632222110979344,
+          "imd_band_eqodds": 0.21346122134887047,
+          "gender_eqodds": 0.06571832693473423
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7689788053949904,
+          "balanced_accuracy": 0.757739165689387,
+          "macro_f1": 0.7595641281908907,
+          "disability_di": 0.8027991016299206,
+          "imd_band_di": 0.6168380051740677,
+          "gender_di": 0.9099059729839122,
+          "disability_eqodds": 0.05048374200990188,
+          "imd_band_eqodds": 0.1453031385697796,
+          "gender_eqodds": 0.061850429940953244
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.586897880539499,
+          "balanced_accuracy": 0.5820599051997821,
+          "macro_f1": 0.5797255942798301,
+          "disability_di": 0.648914786111207,
+          "imd_band_di": 0.22561576354679805,
+          "gender_di": 0.8747557543025986,
+          "disability_eqodds": 0.2376646140005274,
+          "imd_band_eqodds": 0.6753214226081149,
+          "gender_eqodds": 0.07568736163049339
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.761849710982659,
+          "balanced_accuracy": 0.7469493233462711,
+          "macro_f1": 0.7501301381185729,
+          "disability_di": 0.7936647965628632,
+          "imd_band_di": 0.6206539842141742,
+          "gender_di": 0.9318692206076618,
+          "disability_eqodds": 0.06442690413546526,
+          "imd_band_eqodds": 0.11690664408055718,
+          "gender_eqodds": 0.06081677555510656
+        }
+      ]
+    },
+    {
+      "split": 4,
+      "random_state": 104,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7752613240418118,
+          "balanced_accuracy": 0.7646053238542316,
+          "macro_f1": 0.7667110926397255,
+          "disability_di": 0.8227252873973271,
+          "imd_band_di": 0.4520410820664735,
+          "gender_di": 0.8942273997532297,
+          "disability_eqodds": 0.06245306067049716,
+          "imd_band_eqodds": 0.20552310143388208,
+          "gender_eqodds": 0.056098588582262465
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7727448703058459,
+          "balanced_accuracy": 0.7613190797344733,
+          "macro_f1": 0.7637130847716267,
+          "disability_di": 0.8131481083311719,
+          "imd_band_di": 0.5142689122302628,
+          "gender_di": 0.9124027459954234,
+          "disability_eqodds": 0.05182554404379491,
+          "imd_band_eqodds": 0.17767537122375832,
+          "gender_eqodds": 0.06285022119233197
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.5911730545876888,
+          "balanced_accuracy": 0.5874382990899965,
+          "macro_f1": 0.5851591928905846,
+          "disability_di": 0.659734849070466,
+          "imd_band_di": 0.24075404809811246,
+          "gender_di": 0.911864272575939,
+          "disability_eqodds": 0.22463997338691588,
+          "imd_band_eqodds": 0.6684160653108827,
+          "gender_eqodds": 0.049021295169286105
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7630662020905923,
+          "balanced_accuracy": 0.7497684288685021,
+          "macro_f1": 0.7526933464830051,
+          "disability_di": 0.7832570023668493,
+          "imd_band_di": 0.5606169296987088,
+          "gender_di": 0.9422944272583365,
+          "disability_eqodds": 0.07245170338868023,
+          "imd_band_eqodds": 0.12238619179225114,
+          "gender_eqodds": 0.05642159960676918
+        }
+      ]
+    },
+    {
+      "split": 5,
+      "random_state": 105,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7704091526081055,
+          "balanced_accuracy": 0.7596150626213918,
+          "macro_f1": 0.7614575158434808,
+          "disability_di": 0.733595047507716,
+          "imd_band_di": 0.49947429906542057,
+          "gender_di": 0.8802076344117389,
+          "disability_eqodds": 0.07894903914243157,
+          "imd_band_eqodds": 0.22324232183976792,
+          "gender_eqodds": 0.08024263617254201
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7706030637967811,
+          "balanced_accuracy": 0.7597804065367356,
+          "macro_f1": 0.7616403725638121,
+          "disability_di": 0.7657155025553662,
+          "imd_band_di": 0.6194070188785009,
+          "gender_di": 0.8580869402015417,
+          "disability_eqodds": 0.06946011281224818,
+          "imd_band_eqodds": 0.13011752743802146,
+          "gender_eqodds": 0.09167078918370597
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.6048089974791545,
+          "balanced_accuracy": 0.5982435871676378,
+          "macro_f1": 0.596750868120302,
+          "disability_di": 0.6036913499657693,
+          "imd_band_di": 0.20747401418907774,
+          "gender_di": 0.8754092835130971,
+          "disability_eqodds": 0.25832018565540993,
+          "imd_band_eqodds": 0.6416568742655698,
+          "gender_eqodds": 0.06332249112231808
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7607135931743262,
+          "balanced_accuracy": 0.7472038041658294,
+          "macro_f1": 0.7499699040008349,
+          "disability_di": 0.7741937045067369,
+          "imd_band_di": 0.6466899749182945,
+          "gender_di": 0.9154709036986954,
+          "disability_eqodds": 0.0610569421924646,
+          "imd_band_eqodds": 0.11697486960644854,
+          "gender_eqodds": 0.06829477812523999
+        }
+      ]
+    },
+    {
+      "split": 6,
+      "random_state": 106,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7770921712302352,
+          "balanced_accuracy": 0.7647502868154578,
+          "macro_f1": 0.765732129883544,
+          "disability_di": 0.7937400411068175,
+          "imd_band_di": 0.3882109788359788,
+          "gender_di": 0.8471060946063523,
+          "disability_eqodds": 0.08482922091593822,
+          "imd_band_eqodds": 0.29220233089030395,
+          "gender_eqodds": 0.09034386794880378
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7776706517547243,
+          "balanced_accuracy": 0.7661680146889376,
+          "macro_f1": 0.7667323737362566,
+          "disability_di": 0.8147514771648274,
+          "imd_band_di": 0.46878306878306875,
+          "gender_di": 0.8453722841461127,
+          "disability_eqodds": 0.07352228040506123,
+          "imd_band_eqodds": 0.14791666666666659,
+          "gender_eqodds": 0.08408951655737817
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.5925568839182415,
+          "balanced_accuracy": 0.5851038452579221,
+          "macro_f1": 0.5819779460349598,
+          "disability_di": 0.6286555613940507,
+          "imd_band_di": 0.265814933423226,
+          "gender_di": 0.8491841284216808,
+          "disability_eqodds": 0.25495524296675187,
+          "imd_band_eqodds": 0.5731106572149465,
+          "gender_eqodds": 0.07834392188632583
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7678364828384111,
+          "balanced_accuracy": 0.7542053810441454,
+          "macro_f1": 0.7555645960406434,
+          "disability_di": 0.7768140469642479,
+          "imd_band_di": 0.47943722943722944,
+          "gender_di": 0.9056648734682317,
+          "disability_eqodds": 0.09278374321671862,
+          "imd_band_eqodds": 0.13276462813889225,
+          "gender_eqodds": 0.07449096609871597
+        }
+      ]
+    },
+    {
+      "split": 7,
+      "random_state": 107,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7762291908633372,
+          "balanced_accuracy": 0.7620114169875201,
+          "macro_f1": 0.7642609974633536,
+          "disability_di": 0.8374754174860838,
+          "imd_band_di": 0.4631293168842577,
+          "gender_di": 0.858701488418413,
+          "disability_eqodds": 0.050610889423288674,
+          "imd_band_eqodds": 0.2096434567339157,
+          "gender_eqodds": 0.1030672470503905
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7770034843205574,
+          "balanced_accuracy": 0.7629846529972525,
+          "macro_f1": 0.7651628785086676,
+          "disability_di": 0.8443023680515763,
+          "imd_band_di": 0.6026346712845569,
+          "gender_di": 0.8413535742695335,
+          "disability_eqodds": 0.050610889423288674,
+          "imd_band_eqodds": 0.12209302325581395,
+          "gender_eqodds": 0.10849244749666165
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.5962059620596206,
+          "balanced_accuracy": 0.5886735788009113,
+          "macro_f1": 0.5859770928560133,
+          "disability_di": 0.5876312266246935,
+          "imd_band_di": 0.22347183171925442,
+          "gender_di": 0.8877376330345664,
+          "disability_eqodds": 0.29328535963499736,
+          "imd_band_eqodds": 0.6222307104660046,
+          "gender_eqodds": 0.06514871592367466
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7665505226480837,
+          "balanced_accuracy": 0.7519932802605307,
+          "macro_f1": 0.7541098282248725,
+          "disability_di": 0.8955176354456713,
+          "imd_band_di": 0.5858585858585859,
+          "gender_di": 0.8772660545742893,
+          "disability_eqodds": 0.02464942297369832,
+          "imd_band_eqodds": 0.12016718913270641,
+          "gender_eqodds": 0.09823456982813938
+        }
+      ]
+    },
+    {
+      "split": 8,
+      "random_state": 108,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7676709154113557,
+          "balanced_accuracy": 0.755432261292525,
+          "macro_f1": 0.7579241978220019,
+          "disability_di": 0.7381670804894616,
+          "imd_band_di": 0.46689405013264035,
+          "gender_di": 0.9267766497461928,
+          "disability_eqodds": 0.08678955453149004,
+          "imd_band_eqodds": 0.2056867891513562,
+          "gender_eqodds": 0.06069191532098217
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7674777906527617,
+          "balanced_accuracy": 0.7553352202677595,
+          "macro_f1": 0.7577815673615613,
+          "disability_di": 0.7285804950285594,
+          "imd_band_di": 0.574104382615021,
+          "gender_di": 0.9093430637278002,
+          "disability_eqodds": 0.0858275139508804,
+          "imd_band_eqodds": 0.1591503267973856,
+          "gender_eqodds": 0.06908757741540472
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.596948628814214,
+          "balanced_accuracy": 0.595002779076695,
+          "macro_f1": 0.591737556857509,
+          "disability_di": 0.7065537814863361,
+          "imd_band_di": 0.2349962718271515,
+          "gender_di": 0.801169387599214,
+          "disability_eqodds": 0.1915422885572139,
+          "imd_band_eqodds": 0.6896562739585995,
+          "gender_eqodds": 0.09789359621534477
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7622634221707223,
+          "balanced_accuracy": 0.7473493509161733,
+          "macro_f1": 0.7507473043256898,
+          "disability_di": 0.7143036332422854,
+          "imd_band_di": 0.6168899395849751,
+          "gender_di": 0.9923421106268986,
+          "disability_eqodds": 0.09382497620866681,
+          "imd_band_eqodds": 0.13088363954505688,
+          "gender_eqodds": 0.04895546237365592
+        }
+      ]
+    },
+    {
+      "split": 9,
+      "random_state": 109,
+      "conditions": [
+        {
+          "condition": "all_features",
+          "n_features": 12,
+          "accuracy": 0.7747242113412038,
+          "balanced_accuracy": 0.7610874274076677,
+          "macro_f1": 0.7640091960632964,
+          "disability_di": 0.7574702692520856,
+          "imd_band_di": 0.4671077362604315,
+          "gender_di": 0.8753663117404183,
+          "disability_eqodds": 0.09486115786118243,
+          "imd_band_eqodds": 0.1994395844723893,
+          "gender_eqodds": 0.06762008733624447
+        },
+        {
+          "condition": "exclude_protected",
+          "n_features": 12,
+          "accuracy": 0.7731759241339269,
+          "balanced_accuracy": 0.7584005120264885,
+          "macro_f1": 0.761761328104223,
+          "disability_di": 0.7856949490631902,
+          "imd_band_di": 0.5521536066424494,
+          "gender_di": 0.8713932811036526,
+          "disability_eqodds": 0.05781503913259611,
+          "imd_band_eqodds": 0.12346910880262438,
+          "gender_eqodds": 0.06141193595342065
+        },
+        {
+          "condition": "demographic_only",
+          "n_features": 9,
+          "accuracy": 0.5951228952970776,
+          "balanced_accuracy": 0.59155432009958,
+          "macro_f1": 0.5885104129360144,
+          "disability_di": 0.6599021066865879,
+          "imd_band_di": 0.15509898256960328,
+          "gender_di": 0.9099404711841281,
+          "disability_eqodds": 0.21854066958981555,
+          "imd_band_eqodds": 0.6677990855981711,
+          "gender_eqodds": 0.043372556646892935
+        },
+        {
+          "condition": "behavioral_only",
+          "n_features": 7,
+          "accuracy": 0.7669827753048191,
+          "balanced_accuracy": 0.7504770043476402,
+          "macro_f1": 0.7543212294782868,
+          "disability_di": 0.7585566026100309,
+          "imd_band_di": 0.5636090756599276,
+          "gender_di": 0.896260763481742,
+          "disability_eqodds": 0.06813549702020072,
+          "imd_band_eqodds": 0.11265718972115911,
+          "gender_eqodds": 0.0575291120815139
+        }
+      ]
+    }
+  ]
+}

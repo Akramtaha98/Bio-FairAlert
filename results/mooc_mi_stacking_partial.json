@@ -1,0 +1,1159 @@
+{
+  "folds": [
+    {
+      "cutoff_day": 21,
+      "fold": 0,
+      "n_users": 7047,
+      "selected_features": [
+        "day_max",
+        "num_actions",
+        "day_mean",
+        "day_std",
+        "FEATURE0_mean",
+        "FEATURE1_std",
+        "FEATURE0_max",
+        "FEATURE0_std",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE3_mean",
+        "FEATURE1_mean"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "day_max",
+          "mi": 0.203952269702383
+        },
+        {
+          "feature": "num_actions",
+          "mi": 0.1964620153508334
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.18283598947532353
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.16663821572713666
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.1564124265706055
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.1428251267142513
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.13758537876758514
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.13532440194910622
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.13073520514861525
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.11195391647569508
+        },
+        {
+          "feature": "FEATURE3_mean",
+          "mi": 0.11107635525671578
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.10888663646373509
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7887463277174891,
+        "auc": 0.8626238524101207
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7734643153035863,
+        "auc": 0.8453983646389548
+      }
+    },
+    {
+      "cutoff_day": 21,
+      "fold": 1,
+      "n_users": 7047,
+      "selected_features": [
+        "day_max",
+        "num_actions",
+        "day_mean",
+        "day_std",
+        "FEATURE0_mean",
+        "FEATURE1_std",
+        "FEATURE0_max",
+        "FEATURE0_std",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE3_mean",
+        "FEATURE1_mean"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "day_max",
+          "mi": 0.203952269702383
+        },
+        {
+          "feature": "num_actions",
+          "mi": 0.1964620153508334
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.18283598947532353
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.16663821572713666
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.1564124265706055
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.1428251267142513
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.13758537876758514
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.13532440194910622
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.13073520514861525
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.11195391647569508
+        },
+        {
+          "feature": "FEATURE3_mean",
+          "mi": 0.11107635525671578
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.10888663646373509
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7862288570279609,
+        "auc": 0.8648143297828997
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7817296340023613,
+        "auc": 0.8540367993713986
+      }
+    },
+    {
+      "cutoff_day": 21,
+      "fold": 2,
+      "n_users": 7047,
+      "selected_features": [
+        "day_max",
+        "num_actions",
+        "day_mean",
+        "day_std",
+        "FEATURE0_mean",
+        "FEATURE1_std",
+        "FEATURE0_max",
+        "FEATURE0_std",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE3_mean",
+        "FEATURE1_mean"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "day_max",
+          "mi": 0.203952269702383
+        },
+        {
+          "feature": "num_actions",
+          "mi": 0.1964620153508334
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.18283598947532353
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.16663821572713666
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.1564124265706055
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.1428251267142513
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.13758537876758514
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.13532440194910622
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.13073520514861525
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.11195391647569508
+        },
+        {
+          "feature": "FEATURE3_mean",
+          "mi": 0.11107635525671578
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.10888663646373509
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7952260151924665,
+        "auc": 0.8727562423607474
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7842212391565452,
+        "auc": 0.859397372097084
+      }
+    },
+    {
+      "cutoff_day": 14,
+      "fold": 0,
+      "n_users": 7047,
+      "selected_features": [
+        "day_max",
+        "day_std",
+        "num_actions",
+        "day_mean",
+        "FEATURE0_std",
+        "FEATURE0_mean",
+        "FEATURE1_std",
+        "FEATURE0_max",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE1_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "day_max",
+          "mi": 0.16851332526091567
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.1609393900180318
+        },
+        {
+          "feature": "num_actions",
+          "mi": 0.16034749926860492
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.1526373051008112
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.1362893404825254
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.12921090365387555
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.12288709228125705
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.1194734094173815
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.10784704395386324
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.10255492600121996
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.08926234333063454
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.0713343433501159
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.763318098855686,
+        "auc": 0.8414979703919435
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.751327434757044,
+        "auc": 0.8239004952185294
+      }
+    },
+    {
+      "cutoff_day": 14,
+      "fold": 1,
+      "n_users": 7047,
+      "selected_features": [
+        "day_max",
+        "day_std",
+        "num_actions",
+        "day_mean",
+        "FEATURE0_std",
+        "FEATURE0_mean",
+        "FEATURE1_std",
+        "FEATURE0_max",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE1_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "day_max",
+          "mi": 0.16851332526091567
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.1609393900180318
+        },
+        {
+          "feature": "num_actions",
+          "mi": 0.16034749926860492
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.1526373051008112
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.1362893404825254
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.12921090365387555
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.12288709228125705
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.1194734094173815
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.10784704395386324
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.10255492600121996
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.08926234333063454
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.0713343433501159
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7848090870867714,
+        "auc": 0.8552667672472911
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7727841325479177,
+        "auc": 0.8406509628600695
+      }
+    },
+    {
+      "cutoff_day": 14,
+      "fold": 2,
+      "n_users": 7047,
+      "selected_features": [
+        "day_max",
+        "day_std",
+        "num_actions",
+        "day_mean",
+        "FEATURE0_std",
+        "FEATURE0_mean",
+        "FEATURE1_std",
+        "FEATURE0_max",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE1_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "day_max",
+          "mi": 0.16851332526091567
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.1609393900180318
+        },
+        {
+          "feature": "num_actions",
+          "mi": 0.16034749926860492
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.1526373051008112
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.1362893404825254
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.12921090365387555
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.12288709228125705
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.1194734094173815
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.10784704395386324
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.10255492600121996
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.08926234333063454
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.0713343433501159
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7796305616990161,
+        "auc": 0.8515263644773358
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7705055139784789,
+        "auc": 0.8415238694163892
+      }
+    },
+    {
+      "cutoff_day": 7,
+      "fold": 0,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "day_max",
+        "day_mean",
+        "day_std",
+        "FEATURE0_std",
+        "FEATURE1_std",
+        "FEATURE0_mean",
+        "FEATURE0_max",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE1_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.1228072854447706
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.11102962019222873
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.10520795269110872
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.10484643294481577
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.10155023345216252
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.09710388498834965
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.09642370269316403
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.07872911258828497
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.07851844326351975
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.06931558777337199
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.05849590414373074
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.039795603256292944
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7410110223034665,
+        "auc": 0.8073846173106898
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7372787140056266,
+        "auc": 0.8041976263059386
+      }
+    },
+    {
+      "cutoff_day": 7,
+      "fold": 1,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "day_max",
+        "day_mean",
+        "day_std",
+        "FEATURE0_std",
+        "FEATURE1_std",
+        "FEATURE0_mean",
+        "FEATURE0_max",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE1_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.1228072854447706
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.11102962019222873
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.10520795269110872
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.10484643294481577
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.10155023345216252
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.09710388498834965
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.09642370269316403
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.07872911258828497
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.07851844326351975
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.06931558777337199
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.05849590414373074
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.039795603256292944
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7515889264029161,
+        "auc": 0.8201615326351636
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7342979514348515,
+        "auc": 0.8141623526613292
+      }
+    },
+    {
+      "cutoff_day": 7,
+      "fold": 2,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "day_max",
+        "day_mean",
+        "day_std",
+        "FEATURE0_std",
+        "FEATURE1_std",
+        "FEATURE0_mean",
+        "FEATURE0_max",
+        "FEATURE2_std",
+        "FEATURE2_mean",
+        "FEATURE1_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.1228072854447706
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.11102962019222873
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.10520795269110872
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.10484643294481577
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.10155023345216252
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.09710388498834965
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.09642370269316403
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.07872911258828497
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.07851844326351975
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.06931558777337199
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.05849590414373074
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.039795603256292944
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.7355316930142979,
+        "auc": 0.8217984550957428
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7288473371652079,
+        "auc": 0.8114088487708997
+      }
+    },
+    {
+      "cutoff_day": 3,
+      "fold": 0,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "FEATURE1_std",
+        "day_std",
+        "day_mean",
+        "day_max",
+        "FEATURE2_std",
+        "FEATURE0_mean",
+        "FEATURE0_std",
+        "FEATURE0_max",
+        "FEATURE1_mean",
+        "FEATURE2_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.1056425892995081
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.07453143683503938
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.06522524829482057
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.06247220982146717
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.06136581449682854
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.06027589135838962
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.059300758822103505
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.05480136272322267
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.047548671095226425
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.046677749281369696
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.04006668977761918
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.027236039517497757
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.6759368425810656,
+        "auc": 0.785952171821737
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.6999550157444894,
+        "auc": 0.7857774605963012
+      }
+    },
+    {
+      "cutoff_day": 3,
+      "fold": 1,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "FEATURE1_std",
+        "day_std",
+        "day_mean",
+        "day_max",
+        "FEATURE2_std",
+        "FEATURE0_mean",
+        "FEATURE0_std",
+        "FEATURE0_max",
+        "FEATURE1_mean",
+        "FEATURE2_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.1056425892995081
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.07453143683503938
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.06522524829482057
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.06247220982146717
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.06136581449682854
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.06027589135838962
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.059300758822103505
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.05480136272322267
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.047548671095226425
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.046677749281369696
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.04006668977761918
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.027236039517497757
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.6898046887918823,
+        "auc": 0.7964810283650864
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7044091156827063,
+        "auc": 0.7916087200507491
+      }
+    },
+    {
+      "cutoff_day": 3,
+      "fold": 2,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "FEATURE1_std",
+        "day_std",
+        "day_mean",
+        "day_max",
+        "FEATURE2_std",
+        "FEATURE0_mean",
+        "FEATURE0_std",
+        "FEATURE0_max",
+        "FEATURE1_mean",
+        "FEATURE2_mean",
+        "FEATURE3_std"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.1056425892995081
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.07453143683503938
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.06522524829482057
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.06247220982146717
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.06136581449682854
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.06027589135838962
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.059300758822103505
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.05480136272322267
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.047548671095226425
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.046677749281369696
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.04006668977761918
+        },
+        {
+          "feature": "FEATURE3_std",
+          "mi": 0.027236039517497757
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.688641890423483,
+        "auc": 0.7975650222027034
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.7017199061482098,
+        "auc": 0.7963159022941633
+      }
+    },
+    {
+      "cutoff_day": 1,
+      "fold": 0,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "FEATURE1_std",
+        "day_max",
+        "day_std",
+        "day_mean",
+        "FEATURE1_mean",
+        "FEATURE2_std",
+        "FEATURE0_std",
+        "FEATURE2_mean",
+        "FEATURE0_mean",
+        "FEATURE0_max",
+        "FEATURE3_mean"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.07975608784845845
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.055304396841757475
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.04391222816716489
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.04367029188112692
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.040636432052772564
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.036991729827166475
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.036854121577042376
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.023978761221292277
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.023794040152286478
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.022827450879216782
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.022789435798921787
+        },
+        {
+          "feature": "FEATURE3_mean",
+          "mi": 0.013348760901630063
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.5840459344389811,
+        "auc": 0.7523091948659956
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.644203413940256,
+        "auc": 0.7501680492839122
+      }
+    },
+    {
+      "cutoff_day": 1,
+      "fold": 1,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "FEATURE1_std",
+        "day_max",
+        "day_std",
+        "day_mean",
+        "FEATURE1_mean",
+        "FEATURE2_std",
+        "FEATURE0_std",
+        "FEATURE2_mean",
+        "FEATURE0_mean",
+        "FEATURE0_max",
+        "FEATURE3_mean"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.07975608784845845
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.055304396841757475
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.04391222816716489
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.04367029188112692
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.040636432052772564
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.036991729827166475
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.036854121577042376
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.023978761221292277
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.023794040152286478
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.022827450879216782
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.022789435798921787
+        },
+        {
+          "feature": "FEATURE3_mean",
+          "mi": 0.013348760901630063
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.5851559093030432,
+        "auc": 0.7797714134328712
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.6601302628777551,
+        "auc": 0.7701738222710774
+      }
+    },
+    {
+      "cutoff_day": 1,
+      "fold": 2,
+      "n_users": 7047,
+      "selected_features": [
+        "num_actions",
+        "FEATURE1_std",
+        "day_max",
+        "day_std",
+        "day_mean",
+        "FEATURE1_mean",
+        "FEATURE2_std",
+        "FEATURE0_std",
+        "FEATURE2_mean",
+        "FEATURE0_mean",
+        "FEATURE0_max",
+        "FEATURE3_mean"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "num_actions",
+          "mi": 0.07975608784845845
+        },
+        {
+          "feature": "FEATURE1_std",
+          "mi": 0.055304396841757475
+        },
+        {
+          "feature": "day_max",
+          "mi": 0.04391222816716489
+        },
+        {
+          "feature": "day_std",
+          "mi": 0.04367029188112692
+        },
+        {
+          "feature": "day_mean",
+          "mi": 0.040636432052772564
+        },
+        {
+          "feature": "FEATURE1_mean",
+          "mi": 0.036991729827166475
+        },
+        {
+          "feature": "FEATURE2_std",
+          "mi": 0.036854121577042376
+        },
+        {
+          "feature": "FEATURE0_std",
+          "mi": 0.023978761221292277
+        },
+        {
+          "feature": "FEATURE2_mean",
+          "mi": 0.023794040152286478
+        },
+        {
+          "feature": "FEATURE0_mean",
+          "mi": 0.022827450879216782
+        },
+        {
+          "feature": "FEATURE0_max",
+          "mi": 0.022789435798921787
+        },
+        {
+          "feature": "FEATURE3_mean",
+          "mi": 0.013348760901630063
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.5736486659825552,
+        "auc": 0.7601531423239041
+      },
+      "best_individual_lgbm": {
+        "macroF1": 0.6608563369568663,
+        "auc": 0.762846873492499
+      }
+    }
+  ]
+}

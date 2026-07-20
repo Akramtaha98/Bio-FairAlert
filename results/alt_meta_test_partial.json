@@ -1,0 +1,28 @@
+{
+  "folds": [
+    {
+      "cutoff_day": 100,
+      "fold": 0,
+      "altmeta_stacking": {
+        "macroF1": 0.44410046853719043,
+        "macroAUC": 0.7714237942983805
+      }
+    },
+    {
+      "cutoff_day": 100,
+      "fold": 1,
+      "altmeta_stacking": {
+        "macroF1": 0.4138579153587851,
+        "macroAUC": 0.77474136906695
+      }
+    },
+    {
+      "cutoff_day": 100,
+      "fold": 2,
+      "altmeta_stacking": {
+        "macroF1": 0.42215817788052235,
+        "macroAUC": 0.7834047215588951
+      }
+    }
+  ]
+}

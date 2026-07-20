@@ -1,0 +1,216 @@
+{
+  "cutoff": 75,
+  "shap_global_importance": [
+    {
+      "feature": "num__submission_rate",
+      "mean_abs_shap": 0.5507337392584677
+    },
+    {
+      "feature": "num__weighted_mean_score",
+      "mean_abs_shap": 0.4305570418600901
+    },
+    {
+      "feature": "num__mean_score",
+      "mean_abs_shap": 0.42995068833917277
+    },
+    {
+      "feature": "num__n_submitted",
+      "mean_abs_shap": 0.3730076138668593
+    },
+    {
+      "feature": "num__mean_lateness",
+      "mean_abs_shap": 0.29671506094391054
+    },
+    {
+      "feature": "cat__highest_education_Lower Than A Level",
+      "mean_abs_shap": 0.1493777204513893
+    },
+    {
+      "feature": "cat__code_module_FFF",
+      "mean_abs_shap": 0.10955009623050282
+    },
+    {
+      "feature": "cat__code_module_BBB",
+      "mean_abs_shap": 0.09415264706638371
+    },
+    {
+      "feature": "num__n_assessments_due",
+      "mean_abs_shap": 0.0868301733184618
+    },
+    {
+      "feature": "cat__code_module_AAA",
+      "mean_abs_shap": 0.06404490781596989
+    },
+    {
+      "feature": "cat__code_module_DDD",
+      "mean_abs_shap": 0.045664864336791136
+    },
+    {
+      "feature": "num__studied_credits",
+      "mean_abs_shap": 0.042574962564883106
+    },
+    {
+      "feature": "cat__imd_band_0-10%",
+      "mean_abs_shap": 0.040821124972012776
+    },
+    {
+      "feature": "cat__highest_education_A Level or Equivalent",
+      "mean_abs_shap": 0.03511009178136203
+    },
+    {
+      "feature": "cat__imd_band_90-100%",
+      "mean_abs_shap": 0.030878181155094005
+    }
+  ],
+  "lime_reports": [
+    {
+      "test_row": 3,
+      "predicted_proba_at_risk": 0.9301950767542592,
+      "top_factors": [
+        {
+          "factor": "num__weighted_mean_score <= -0.47",
+          "weight": 0.17211744758451994
+        },
+        {
+          "factor": "num__n_banked <= -0.13",
+          "weight": -0.11363411277377304
+        },
+        {
+          "factor": "cat__code_module_AAA > 0.00",
+          "weight": -0.11073607301659533
+        },
+        {
+          "factor": "num__n_submitted <= -0.07",
+          "weight": 0.0977074006177876
+        },
+        {
+          "factor": "num__mean_lateness > 0.36",
+          "weight": 0.07464620770971099
+        },
+        {
+          "factor": "cat__code_module_FFF <= 0.00",
+          "weight": -0.0656979863959594
+        },
+        {
+          "factor": "cat__highest_education_Lower Than A Level <= 0.00",
+          "weight": -0.04823208219157936
+        },
+        {
+          "factor": "num__mean_score <= -0.45",
+          "weight": 0.03462696471345048
+        }
+      ]
+    },
+    {
+      "test_row": 9,
+      "predicted_proba_at_risk": 0.9882687789594308,
+      "top_factors": [
+        {
+          "factor": "num__weighted_mean_score <= -0.47",
+          "weight": 0.1595306665669005
+        },
+        {
+          "factor": "cat__code_module_AAA > 0.00",
+          "weight": -0.11525183863689925
+        },
+        {
+          "factor": "num__n_submitted <= -0.07",
+          "weight": 0.09629132957581865
+        },
+        {
+          "factor": "num__n_banked <= -0.13",
+          "weight": -0.08598534246518888
+        },
+        {
+          "factor": "num__mean_lateness > 0.36",
+          "weight": 0.08090160582513814
+        },
+        {
+          "factor": "cat__code_module_FFF <= 0.00",
+          "weight": -0.07225462314054518
+        },
+        {
+          "factor": "cat__highest_education_Lower Than A Level <= 0.00",
+          "weight": -0.05055248895630575
+        },
+        {
+          "factor": "num__mean_score <= -0.45",
+          "weight": 0.04970228232190312
+        }
+      ]
+    },
+    {
+      "test_row": 14,
+      "predicted_proba_at_risk": 0.8931286831063908,
+      "top_factors": [
+        {
+          "factor": "cat__code_module_AAA > 0.00",
+          "weight": -0.17658976405510143
+        },
+        {
+          "factor": "num__weighted_mean_score <= -0.47",
+          "weight": 0.16086635102942043
+        },
+        {
+          "factor": "num__n_banked <= -0.13",
+          "weight": -0.1232498415568602
+        },
+        {
+          "factor": "num__n_submitted <= -0.07",
+          "weight": 0.09722173541974784
+        },
+        {
+          "factor": "num__mean_lateness <= -0.10",
+          "weight": -0.07415162260254597
+        },
+        {
+          "factor": "cat__code_module_FFF <= 0.00",
+          "weight": -0.06100067382419295
+        },
+        {
+          "factor": "cat__highest_education_No Formal quals <= 0.00",
+          "weight": -0.055753534846349206
+        },
+        {
+          "factor": "num__mean_score <= -0.45",
+          "weight": 0.048727526047109754
+        }
+      ]
+    }
+  ],
+  "rule_thresholds": {
+    "low_submission_rate": 1.0,
+    "low_mean_score": 73.0,
+    "high_lateness": 0.3333333333333333
+  },
+  "rule_reports": [
+    {
+      "row": 3,
+      "risk_tier": "HIGH",
+      "triggered_rules": [
+        "Low average assessment score (39.0 < 73.0)",
+        "Frequent late submissions (avg lateness 1.5 days > 0.3)"
+      ],
+      "predicted_proba_at_risk": 0.9301950767542592
+    },
+    {
+      "row": 9,
+      "risk_tier": "HIGH",
+      "triggered_rules": [
+        "Low assignment submission rate (0.50 < 1.00)",
+        "Low average assessment score (45.0 < 73.0)",
+        "Frequent late submissions (avg lateness 35.0 days > 0.3)"
+      ],
+      "predicted_proba_at_risk": 0.9882687789594308
+    },
+    {
+      "row": 14,
+      "risk_tier": "HIGH",
+      "triggered_rules": [
+        "Low assignment submission rate (0.50 < 1.00)",
+        "Low average assessment score (51.0 < 73.0)"
+      ],
+      "predicted_proba_at_risk": 0.8931286831063908
+    }
+  ]
+}

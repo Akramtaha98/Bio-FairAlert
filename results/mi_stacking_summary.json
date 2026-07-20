@@ -1,0 +1,34 @@
+{
+  "25": {
+    "stacking_macroF1_mean": 0.34157414182792106,
+    "stacking_macroF1_std": 0.007838461496749752,
+    "stacking_macroAUC_mean": 0.6636380406404413,
+    "lightgbm_macroF1_mean": 0.38200347034646104,
+    "lightgbm_macroF1_std": 0.0014526997075649008,
+    "lightgbm_macroAUC_mean": 0.7035167573649789
+  },
+  "50": {
+    "stacking_macroF1_mean": 0.391959939773741,
+    "stacking_macroF1_std": 0.007966605005908187,
+    "stacking_macroAUC_mean": 0.721286683854725,
+    "lightgbm_macroF1_mean": 0.4227852014887312,
+    "lightgbm_macroF1_std": 0.004361892620102993,
+    "lightgbm_macroAUC_mean": 0.7349870449702304
+  },
+  "75": {
+    "stacking_macroF1_mean": 0.4296312835310984,
+    "stacking_macroF1_std": 0.005960238156942573,
+    "stacking_macroAUC_mean": 0.7447865809924791,
+    "lightgbm_macroF1_mean": 0.464643935068849,
+    "lightgbm_macroF1_std": 0.009355996418220552,
+    "lightgbm_macroAUC_mean": 0.77092240423003
+  },
+  "100": {
+    "stacking_macroF1_mean": 0.4351775079977597,
+    "stacking_macroF1_std": 0.002867431527741623,
+    "stacking_macroAUC_mean": 0.7509251919523149,
+    "lightgbm_macroF1_mean": 0.4948199049885453,
+    "lightgbm_macroF1_std": 0.006139121845583311,
+    "lightgbm_macroAUC_mean": 0.7962948915518367
+  }
+}

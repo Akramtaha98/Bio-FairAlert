@@ -1,0 +1,140 @@
+[
+  {
+    "dataset": "mooc",
+    "cutoff": 7,
+    "tuned": {
+      "lr": {
+        "best_params": {
+          "clf__C": 3.7554011884736247
+        },
+        "inner_cv_f1": 0.7035557501530271,
+        "test_macroF1": 0.7012133074439033
+      },
+      "rf": {
+        "best_params": {
+          "clf__max_depth": 4,
+          "clf__min_samples_leaf": 8,
+          "clf__n_estimators": 393
+        },
+        "inner_cv_f1": 0.7415818089558699,
+        "test_macroF1": 0.7413731893284599
+      },
+      "xgb": {
+        "best_params": {
+          "clf__learning_rate": 0.03452090304204987,
+          "clf__max_depth": 7,
+          "clf__n_estimators": 179,
+          "clf__subsample": 0.6571467271687763
+        },
+        "inner_cv_f1": 0.71975599241062,
+        "test_macroF1": 0.7416996139447476
+      },
+      "lgbm": {
+        "best_params": {
+          "clf__learning_rate": 0.09606056073988443,
+          "clf__n_estimators": 101,
+          "clf__num_leaves": 63
+        },
+        "inner_cv_f1": 0.7121937590616395,
+        "test_macroF1": 0.7347601586183666
+      },
+      "stacking_tuned_bases": {
+        "test_macroF1": 0.742427905927108
+      }
+    },
+    "untuned_lightgbm_macroF1": null,
+    "untuned_stacking_macroF1": null
+  },
+  {
+    "dataset": "mooc",
+    "cutoff": 21,
+    "tuned": {
+      "lr": {
+        "best_params": {
+          "clf__C": 9.51714306409916
+        },
+        "inner_cv_f1": 0.7837316719192668,
+        "test_macroF1": 0.7913669064748201
+      },
+      "rf": {
+        "best_params": {
+          "clf__max_depth": 10,
+          "clf__min_samples_leaf": 8,
+          "clf__n_estimators": 230
+        },
+        "inner_cv_f1": 0.7665287014539626,
+        "test_macroF1": 0.7921980965833384
+      },
+      "xgb": {
+        "best_params": {
+          "clf__learning_rate": 0.03452090304204987,
+          "clf__max_depth": 7,
+          "clf__n_estimators": 179,
+          "clf__subsample": 0.6571467271687763
+        },
+        "inner_cv_f1": 0.7637838845761715,
+        "test_macroF1": 0.7792270987209305
+      },
+      "lgbm": {
+        "best_params": {
+          "clf__learning_rate": 0.09606056073988443,
+          "clf__n_estimators": 101,
+          "clf__num_leaves": 63
+        },
+        "inner_cv_f1": 0.7579960052704391,
+        "test_macroF1": 0.7776524221771965
+      },
+      "stacking_tuned_bases": {
+        "test_macroF1": 0.7916683810254224
+      }
+    },
+    "untuned_lightgbm_macroF1": null,
+    "untuned_stacking_macroF1": null
+  },
+  {
+    "dataset": "oulad",
+    "cutoff": 100,
+    "tuned": {
+      "lr": {
+        "best_params": {
+          "clf__C": 1.5701864044243652
+        },
+        "inner_cv_f1": 0.47995152320565854,
+        "test_macroF1": 0.4665849069465466
+      },
+      "rf": {
+        "best_params": {
+          "clf__max_depth": 13,
+          "clf__min_samples_leaf": 8,
+          "clf__n_estimators": 288
+        },
+        "inner_cv_f1": 0.5054921953499304,
+        "test_macroF1": 0.4915100879006059
+      },
+      "xgb": {
+        "best_params": {
+          "clf__learning_rate": 0.25463817725393756,
+          "clf__max_depth": 4,
+          "clf__n_estimators": 271,
+          "clf__subsample": 0.996884623716487
+        },
+        "inner_cv_f1": 0.4727235468901633,
+        "test_macroF1": 0.4722133536254719
+      },
+      "lgbm": {
+        "best_params": {
+          "clf__learning_rate": 0.09606056073988443,
+          "clf__n_estimators": 101,
+          "clf__num_leaves": 63
+        },
+        "inner_cv_f1": 0.49524966729354936,
+        "test_macroF1": 0.48574432900118214
+      },
+      "stacking_tuned_bases": {
+        "test_macroF1": 0.4443625536198146
+      }
+    },
+    "untuned_lightgbm_macroF1": null,
+    "untuned_stacking_macroF1": null
+  }
+]

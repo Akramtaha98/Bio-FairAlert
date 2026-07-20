@@ -1,0 +1,15 @@
+[
+  {
+    "dataset": "mooc",
+    "cutoff": 21,
+    "majority_class_macroF1": 0.34622877817979403,
+    "ebm_macroF1": 0.7929401807437795
+  },
+  {
+    "dataset": "oulad",
+    "cutoff": 100,
+    "majority_class_macroF1": 0.16512554802710244,
+    "ebm_macroF1": 0.45179404711862203,
+    "ebm_note": "interactions=0 for compute feasibility"
+  }
+]

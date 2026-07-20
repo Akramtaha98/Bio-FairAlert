@@ -1,0 +1,107 @@
+{
+  "cutoff": 75,
+  "top5_features_main_split": [
+    "submission_rate",
+    "weighted_mean_score",
+    "mean_score",
+    "n_submitted",
+    "code_module"
+  ],
+  "bottom5_features_main_split": [
+    "imd_band",
+    "n_assessments_due",
+    "studied_credits",
+    "num_of_prev_attempts",
+    "n_banked"
+  ],
+  "perturbation_stability": [
+    {
+      "seed": 1,
+      "spearman_rho": 0.7412587412587414,
+      "p_value": 0.005801150474478243
+    },
+    {
+      "seed": 2,
+      "spearman_rho": 0.7412587412587414,
+      "p_value": 0.005801150474478243
+    },
+    {
+      "seed": 3,
+      "spearman_rho": 0.7412587412587414,
+      "p_value": 0.005801150474478243
+    }
+  ],
+  "perturbation_stability_mean_rho": 0.7412587412587414,
+  "deletion_test": {
+    "baseline_macroF1": 0.768313006206112,
+    "delete_top5_macroF1": 0.5990397524038507,
+    "delete_top5_drop": 0.16927325380226133,
+    "delete_bottom5_macroF1": 0.7576192432662995,
+    "delete_bottom5_drop": 0.010693762939812501,
+    "delete_random5_macroF1": 0.7373007634398541,
+    "delete_random5_drop": 0.031012242766257914,
+    "random5_features": [
+      "n_submitted",
+      "mean_lateness",
+      "imd_band",
+      "code_module",
+      "n_banked"
+    ]
+  },
+  "shap_vs_permutation_importance": {
+    "spearman_rho": 0.9300699300699302,
+    "p_value": 1.170222792865967e-05,
+    "shap_ranking": [
+      "submission_rate",
+      "weighted_mean_score",
+      "mean_score",
+      "n_submitted",
+      "code_module",
+      "mean_lateness",
+      "highest_education",
+      "imd_band",
+      "n_assessments_due",
+      "studied_credits",
+      "num_of_prev_attempts",
+      "n_banked"
+    ],
+    "permutation_ranking": [
+      "submission_rate",
+      "n_submitted",
+      "weighted_mean_score",
+      "mean_lateness",
+      "code_module",
+      "mean_score",
+      "highest_education",
+      "n_assessments_due",
+      "imd_band",
+      "studied_credits",
+      "num_of_prev_attempts",
+      "n_banked"
+    ]
+  },
+  "split_consistency": [
+    {
+      "seed": 100,
+      "top5": [
+        "submission_rate",
+        "weighted_mean_score",
+        "mean_score",
+        "n_submitted",
+        "code_module"
+      ],
+      "overlap_with_main_split": 5
+    },
+    {
+      "seed": 200,
+      "top5": [
+        "submission_rate",
+        "mean_score",
+        "weighted_mean_score",
+        "n_submitted",
+        "code_module"
+      ],
+      "overlap_with_main_split": 5
+    }
+  ]
+}

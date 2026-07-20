@@ -1,0 +1,80 @@
+{
+  "before": {
+    "disability": {
+      "tpr_gap_mean": 0.05281162706480573,
+      "tpr_gap_std": 0.013229122896848924,
+      "fpr_gap_mean": 0.04895360852809728,
+      "fpr_gap_std": 0.01705110542606786,
+      "equalized_odds_diff_mean": 0.06022723529285688,
+      "equalized_odds_diff_std": 0.008001789609153032,
+      "demographic_parity_diff_mean": 0.10116215114091401,
+      "demographic_parity_diff_std": 0.014650677382216263,
+      "disparate_impact_ratio_mean": 0.7914536561827867,
+      "disparate_impact_ratio_std": 0.02392931532960327
+    },
+    "imd_band": {
+      "tpr_gap_mean": 0.20178763375671602,
+      "tpr_gap_std": 0.017341555478409744,
+      "fpr_gap_mean": 0.17191912803459383,
+      "fpr_gap_std": 0.014149188084798344,
+      "equalized_odds_diff_mean": 0.20239589087368168,
+      "equalized_odds_diff_std": 0.016173629463449215,
+      "demographic_parity_diff_mean": 0.2807219023659434,
+      "demographic_parity_diff_std": 0.004255727059960269,
+      "disparate_impact_ratio_mean": 0.48086638006767596,
+      "disparate_impact_ratio_std": 0.02293286394526203
+    },
+    "gender": {
+      "tpr_gap_mean": 0.07038655628480697,
+      "tpr_gap_std": 0.012507097977193132,
+      "fpr_gap_mean": 0.0200482350378657,
+      "fpr_gap_std": 0.01005911264697624,
+      "equalized_odds_diff_mean": 0.07038655628480697,
+      "equalized_odds_diff_std": 0.012507097977193132,
+      "demographic_parity_diff_mean": 0.05320011800687343,
+      "demographic_parity_diff_std": 0.01222326835730136,
+      "disparate_impact_ratio_mean": 0.8724853614115735,
+      "disparate_impact_ratio_std": 0.027251396676901272
+    },
+    "overall_macrof1_mean": 0.7617364000592883
+  },
+  "after_disability_calib": {
+    "disability": {
+      "tpr_gap_mean": 0.014535099132275265,
+      "tpr_gap_std": 0.01115811475290169,
+      "fpr_gap_mean": 0.01713918628458417,
+      "fpr_gap_std": 0.011815471140718172,
+      "equalized_odds_diff_mean": 0.01940987926999451,
+      "equalized_odds_diff_std": 0.012131196870373081,
+      "demographic_parity_diff_mean": 0.04290066665017411,
+      "demographic_parity_diff_std": 0.01838688769149563,
+      "disparate_impact_ratio_mean": 0.8909805495882723,
+      "disparate_impact_ratio_std": 0.04184020819318351
+    },
+    "imd_band": {
+      "tpr_gap_mean": 0.20157626998987227,
+      "tpr_gap_std": 0.041774285545311755,
+      "fpr_gap_mean": 0.14332466110830272,
+      "fpr_gap_std": 0.034666061609307706,
+      "equalized_odds_diff_mean": 0.20157626998987227,
+      "equalized_odds_diff_std": 0.041774285545311755,
+      "demographic_parity_diff_mean": 0.2603223924693099,
+      "demographic_parity_diff_std": 0.01097048179088758,
+      "disparate_impact_ratio_mean": 0.4657170711875178,
+      "disparate_impact_ratio_std": 0.01212783154028195
+    },
+    "gender": {
+      "tpr_gap_mean": 0.0744404497213694,
+      "tpr_gap_std": 0.008660454919850378,
+      "fpr_gap_mean": 0.023680048027331396,
+      "fpr_gap_std": 0.013546489311039148,
+      "equalized_odds_diff_mean": 0.0744404497213694,
+      "equalized_odds_diff_std": 0.008660454919850378,
+      "demographic_parity_diff_mean": 0.056874271951752264,
+      "demographic_parity_diff_std": 0.012974687816652007,
+      "disparate_impact_ratio_mean": 0.8486078944072041,
+      "disparate_impact_ratio_std": 0.031340300456659746
+    },
+    "overall_macrof1_mean": 0.7622381209023363
+  }
+}

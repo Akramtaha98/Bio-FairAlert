@@ -1,0 +1,928 @@
+{
+  "folds": [
+    {
+      "cutoff_day": 25,
+      "fold": 0,
+      "n_cohort": 27774,
+      "selected_features": [
+        "weighted_mean_score",
+        "mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "code_module",
+        "highest_education",
+        "n_submitted",
+        "imd_band",
+        "n_assessments_due",
+        "module_presentation_length",
+        "num_of_prev_attempts",
+        "code_presentation"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.07383631387753686
+        },
+        {
+          "feature": "mean_score",
+          "mi": 0.0670260334397641
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.060499699742880164
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.024829650044660756
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.020899669214457055
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.015935845646938215
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.013343964649553897
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012288923603269025
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.011723785611081894
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.009065630336216213
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.008645694569728413
+        },
+        {
+          "feature": "code_presentation",
+          "mi": 0.006154608902956091
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.3309414115614106,
+        "macroAUC": 0.6546556049121764
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.38009890504265337,
+        "macroAUC": 0.7005678430431515
+      }
+    },
+    {
+      "cutoff_day": 25,
+      "fold": 1,
+      "n_cohort": 27774,
+      "selected_features": [
+        "weighted_mean_score",
+        "mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "code_module",
+        "highest_education",
+        "n_submitted",
+        "imd_band",
+        "n_assessments_due",
+        "module_presentation_length",
+        "num_of_prev_attempts",
+        "code_presentation"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.07383631387753686
+        },
+        {
+          "feature": "mean_score",
+          "mi": 0.0670260334397641
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.060499699742880164
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.024829650044660756
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.020899669214457055
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.015935845646938215
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.013343964649553897
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012288923603269025
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.011723785611081894
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.009065630336216213
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.008645694569728413
+        },
+        {
+          "feature": "code_presentation",
+          "mi": 0.006154608902956091
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.3496054661254671,
+        "macroAUC": 0.667354299901626
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.3822886863501297,
+        "macroAUC": 0.707382642877985
+      }
+    },
+    {
+      "cutoff_day": 25,
+      "fold": 2,
+      "n_cohort": 27774,
+      "selected_features": [
+        "weighted_mean_score",
+        "mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "code_module",
+        "highest_education",
+        "n_submitted",
+        "imd_band",
+        "n_assessments_due",
+        "module_presentation_length",
+        "num_of_prev_attempts",
+        "code_presentation"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.07383631387753686
+        },
+        {
+          "feature": "mean_score",
+          "mi": 0.0670260334397641
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.060499699742880164
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.024829650044660756
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.020899669214457055
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.015935845646938215
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.013343964649553897
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012288923603269025
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.011723785611081894
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.009065630336216213
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.008645694569728413
+        },
+        {
+          "feature": "code_presentation",
+          "mi": 0.006154608902956091
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.34417554779688553,
+        "macroAUC": 0.6689042171075215
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.38362281964660006,
+        "macroAUC": 0.7025997861738004
+      }
+    },
+    {
+      "cutoff_day": 50,
+      "fold": 0,
+      "n_cohort": 26772,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "n_submitted",
+        "code_module",
+        "highest_education",
+        "imd_band",
+        "n_banked",
+        "n_assessments_due",
+        "studied_credits",
+        "num_of_prev_attempts"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.1183477960580741
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.11182647457943595
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.06853330754954579
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.038951833837043814
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.026980485125567277
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.018313239597128272
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.015809280161467196
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012666459132847002
+        },
+        {
+          "feature": "n_banked",
+          "mi": 0.009309472942517605
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.007809439111304162
+        },
+        {
+          "feature": "studied_credits",
+          "mi": 0.006832389365386771
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.006687940212479315
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.3832164097505854,
+        "macroAUC": 0.7122083052427206
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.4194563508965368,
+        "macroAUC": 0.731455833434121
+      }
+    },
+    {
+      "cutoff_day": 50,
+      "fold": 1,
+      "n_cohort": 26772,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "n_submitted",
+        "code_module",
+        "highest_education",
+        "imd_band",
+        "n_banked",
+        "n_assessments_due",
+        "studied_credits",
+        "num_of_prev_attempts"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.1183477960580741
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.11182647457943595
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.06853330754954579
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.038951833837043814
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.026980485125567277
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.018313239597128272
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.015809280161467196
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012666459132847002
+        },
+        {
+          "feature": "n_banked",
+          "mi": 0.009309472942517605
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.007809439111304162
+        },
+        {
+          "feature": "studied_credits",
+          "mi": 0.006832389365386771
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.006687940212479315
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.39017839632312756,
+        "macroAUC": 0.7304848812908612
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.4289472068169233,
+        "macroAUC": 0.7381330315306364
+      }
+    },
+    {
+      "cutoff_day": 50,
+      "fold": 2,
+      "n_cohort": 26772,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "n_submitted",
+        "code_module",
+        "highest_education",
+        "imd_band",
+        "n_banked",
+        "n_assessments_due",
+        "studied_credits",
+        "num_of_prev_attempts"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.1183477960580741
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.11182647457943595
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.06853330754954579
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.038951833837043814
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.026980485125567277
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.018313239597128272
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.015809280161467196
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012666459132847002
+        },
+        {
+          "feature": "n_banked",
+          "mi": 0.009309472942517605
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.007809439111304162
+        },
+        {
+          "feature": "studied_credits",
+          "mi": 0.006832389365386771
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.006687940212479315
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.40248501324751007,
+        "macroAUC": 0.7211668650305936
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.41995204675273345,
+        "macroAUC": 0.7353722699459335
+      }
+    },
+    {
+      "cutoff_day": 75,
+      "fold": 0,
+      "n_cohort": 25902,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "n_submitted",
+        "mean_lateness",
+        "code_module",
+        "highest_education",
+        "num_of_prev_attempts",
+        "n_assessments_due",
+        "imd_band",
+        "module_presentation_length",
+        "n_banked"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.17038545294499685
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.15951887723902836
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.11647224189085037
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.08269896463197313
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.06900117400893935
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.01653842954547385
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.016076768756187194
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.014558070756306662
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.013827314236381838
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012642802245493072
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.007821451889473252
+        },
+        {
+          "feature": "n_banked",
+          "mi": 0.007313658312887217
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.4362621197905281,
+        "macroAUC": 0.7427267882070033
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.465592663828001,
+        "macroAUC": 0.7705185094198577
+      }
+    },
+    {
+      "cutoff_day": 75,
+      "fold": 1,
+      "n_cohort": 25902,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "n_submitted",
+        "mean_lateness",
+        "code_module",
+        "highest_education",
+        "num_of_prev_attempts",
+        "n_assessments_due",
+        "imd_band",
+        "module_presentation_length",
+        "n_banked"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.17038545294499685
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.15951887723902836
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.11647224189085037
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.08269896463197313
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.06900117400893935
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.01653842954547385
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.016076768756187194
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.014558070756306662
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.013827314236381838
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012642802245493072
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.007821451889473252
+        },
+        {
+          "feature": "n_banked",
+          "mi": 0.007313658312887217
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.42180912975274765,
+        "macroAUC": 0.7410566015558607
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.4755987849567895,
+        "macroAUC": 0.7764689122571447
+      }
+    },
+    {
+      "cutoff_day": 75,
+      "fold": 2,
+      "n_cohort": 25902,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "n_submitted",
+        "mean_lateness",
+        "code_module",
+        "highest_education",
+        "num_of_prev_attempts",
+        "n_assessments_due",
+        "imd_band",
+        "module_presentation_length",
+        "n_banked"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.17038545294499685
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.15951887723902836
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.11647224189085037
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.08269896463197313
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.06900117400893935
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.01653842954547385
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.016076768756187194
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.014558070756306662
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.013827314236381838
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012642802245493072
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.007821451889473252
+        },
+        {
+          "feature": "n_banked",
+          "mi": 0.007313658312887217
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.4308226010500194,
+        "macroAUC": 0.750576353214573
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.45274035642175653,
+        "macroAUC": 0.7657797910130877
+      }
+    },
+    {
+      "cutoff_day": 100,
+      "fold": 0,
+      "n_cohort": 25305,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "n_submitted",
+        "num_of_prev_attempts",
+        "code_module",
+        "highest_education",
+        "imd_band",
+        "module_presentation_length",
+        "n_assessments_due",
+        "code_presentation"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.1976659766317599
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.17257413373608288
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.14842210856149896
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.08437762609625654
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.07998012715241476
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.0179032605229259
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.01627382121996939
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.016260599085067023
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012743633067207546
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.012034583720697434
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.011665595996528388
+        },
+        {
+          "feature": "code_presentation",
+          "mi": 0.005651916237522675
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.4366675745340267,
+        "macroAUC": 0.750108304416228
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.486620975525615,
+        "macroAUC": 0.7919370838782158
+      }
+    },
+    {
+      "cutoff_day": 100,
+      "fold": 1,
+      "n_cohort": 25305,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "n_submitted",
+        "num_of_prev_attempts",
+        "code_module",
+        "highest_education",
+        "imd_band",
+        "module_presentation_length",
+        "n_assessments_due",
+        "code_presentation"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.1976659766317599
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.17257413373608288
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.14842210856149896
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.08437762609625654
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.07998012715241476
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.0179032605229259
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.01627382121996939
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.016260599085067023
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012743633067207546
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.012034583720697434
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.011665595996528388
+        },
+        {
+          "feature": "code_presentation",
+          "mi": 0.005651916237522675
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.43769866848345534,
+        "macroAUC": 0.7492804071403637
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.4964462356155189,
+        "macroAUC": 0.7935408152120582
+      }
+    },
+    {
+      "cutoff_day": 100,
+      "fold": 2,
+      "n_cohort": 25305,
+      "selected_features": [
+        "mean_score",
+        "weighted_mean_score",
+        "submission_rate",
+        "mean_lateness",
+        "n_submitted",
+        "num_of_prev_attempts",
+        "code_module",
+        "highest_education",
+        "imd_band",
+        "module_presentation_length",
+        "n_assessments_due",
+        "code_presentation"
+      ],
+      "top_features_mi": [
+        {
+          "feature": "mean_score",
+          "mi": 0.1976659766317599
+        },
+        {
+          "feature": "weighted_mean_score",
+          "mi": 0.17257413373608288
+        },
+        {
+          "feature": "submission_rate",
+          "mi": 0.14842210856149896
+        },
+        {
+          "feature": "mean_lateness",
+          "mi": 0.08437762609625654
+        },
+        {
+          "feature": "n_submitted",
+          "mi": 0.07998012715241476
+        },
+        {
+          "feature": "num_of_prev_attempts",
+          "mi": 0.0179032605229259
+        },
+        {
+          "feature": "code_module",
+          "mi": 0.01627382121996939
+        },
+        {
+          "feature": "highest_education",
+          "mi": 0.016260599085067023
+        },
+        {
+          "feature": "imd_band",
+          "mi": 0.012743633067207546
+        },
+        {
+          "feature": "module_presentation_length",
+          "mi": 0.012034583720697434
+        },
+        {
+          "feature": "n_assessments_due",
+          "mi": 0.011665595996528388
+        },
+        {
+          "feature": "code_presentation",
+          "mi": 0.005651916237522675
+        }
+      ],
+      "stacking": {
+        "macroF1": 0.43116628097579696,
+        "macroAUC": 0.753386864300353
+      },
+      "best_individual_lightgbm": {
+        "macroF1": 0.5013925038245017,
+        "macroAUC": 0.803406775565236
+      }
+    }
+  ]
+}

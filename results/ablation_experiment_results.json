@@ -1,0 +1,94 @@
+[
+  {
+    "condition": "all_features",
+    "features_used": [
+      "mean_score",
+      "weighted_mean_score",
+      "submission_rate",
+      "n_submitted",
+      "mean_lateness",
+      "code_module",
+      "highest_education",
+      "num_of_prev_attempts",
+      "n_assessments_due",
+      "imd_band",
+      "module_presentation_length",
+      "n_banked"
+    ],
+    "n_features": 12,
+    "accuracy": 0.7782927771340286,
+    "macro_f1": 0.7685570381998954,
+    "disparate_impact": {
+      "disability": 0.732675288082939,
+      "imd_band": 0.42428765264586155,
+      "gender": 0.9014429744690602
+    }
+  },
+  {
+    "condition": "exclude_protected",
+    "features_used": [
+      "mean_score",
+      "weighted_mean_score",
+      "submission_rate",
+      "n_submitted",
+      "mean_lateness",
+      "code_module",
+      "highest_education",
+      "num_of_prev_attempts",
+      "n_assessments_due",
+      "module_presentation_length",
+      "n_banked",
+      "studied_credits"
+    ],
+    "n_features": 12,
+    "accuracy": 0.7750096562379297,
+    "macro_f1": 0.7653421043531077,
+    "disparate_impact": {
+      "disability": 0.7667741187557497,
+      "imd_band": 0.6061299222473037,
+      "gender": 0.8964518280772809
+    }
+  },
+  {
+    "condition": "demographic_only",
+    "features_used": [
+      "gender",
+      "region",
+      "highest_education",
+      "imd_band",
+      "age_band",
+      "disability",
+      "num_of_prev_attempts",
+      "studied_credits",
+      "date_registration"
+    ],
+    "n_features": 9,
+    "accuracy": 0.5955967555040557,
+    "macro_f1": 0.5869307023029744,
+    "disparate_impact": {
+      "disability": 0.6310230571225149,
+      "imd_band": 0.1997098646034816,
+      "gender": 0.9107207772677939
+    }
+  },
+  {
+    "condition": "behavioral_only",
+    "features_used": [
+      "n_assessments_due",
+      "n_submitted",
+      "submission_rate",
+      "mean_score",
+      "weighted_mean_score",
+      "mean_lateness",
+      "n_banked"
+    ],
+    "n_features": 7,
+    "accuracy": 0.764774044032445,
+    "macro_f1": 0.7531854043392505,
+    "disparate_impact": {
+      "disability": 0.7743089513586254,
+      "imd_band": 0.5798525798525798,
+      "gender": 0.9701927059420341
+    }
+  }
+]

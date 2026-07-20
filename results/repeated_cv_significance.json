@@ -1,0 +1,654 @@
+{
+  "oulad": [
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.3309414115614106,
+      "individual_macroF1": 0.38009890504265337,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.3496054661254671,
+      "individual_macroF1": 0.3822886863501297,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.34417554779688553,
+      "individual_macroF1": 0.38362281964660006,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.3832164097505854,
+      "individual_macroF1": 0.4194563508965368,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.39017839632312756,
+      "individual_macroF1": 0.4289472068169233,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.40248501324751007,
+      "individual_macroF1": 0.41995204675273345,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.4362621197905281,
+      "individual_macroF1": 0.465592663828001,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.42180912975274765,
+      "individual_macroF1": 0.4755987849567895,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.4308226010500194,
+      "individual_macroF1": 0.45274035642175653,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.4366675745340267,
+      "individual_macroF1": 0.486620975525615,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.43769866848345534,
+      "individual_macroF1": 0.4964462356155189,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.43116628097579696,
+      "individual_macroF1": 0.5013925038245017,
+      "source": "original_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.35568610716579907,
+      "individual_macroF1": 0.3873481217439155,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.36291674809006014,
+      "individual_macroF1": 0.39341085529255704,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.3247256532497945,
+      "individual_macroF1": 0.39159052670350436,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.3244754396758067,
+      "individual_macroF1": 0.3852981679341903,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.34961054086455057,
+      "individual_macroF1": 0.3802669843936554,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 25,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.3281036121153006,
+      "individual_macroF1": 0.3854847000550131,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.3783371713659919,
+      "individual_macroF1": 0.41583997229261693,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.4056974289342607,
+      "individual_macroF1": 0.41619601228358116,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.3780972008151443,
+      "individual_macroF1": 0.4223588479754635,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.3791286176156515,
+      "individual_macroF1": 0.41956737459166377,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.3996382816111606,
+      "individual_macroF1": 0.4186845368261326,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 50,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.3729220973245998,
+      "individual_macroF1": 0.4159973208587802,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.42373526928482375,
+      "individual_macroF1": 0.4609499200657004,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.4349774326336576,
+      "individual_macroF1": 0.4607416480928447,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.4253095960244681,
+      "individual_macroF1": 0.47012575594025985,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.42386309554260937,
+      "individual_macroF1": 0.46976334379823365,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.42734575839136707,
+      "individual_macroF1": 0.46732691621696965,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 75,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.41801740128037074,
+      "individual_macroF1": 0.4684511183371469,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.443116216110941,
+      "individual_macroF1": 0.48452921975668806,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.4399317006047912,
+      "individual_macroF1": 0.48866911311029687,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.4455261524866506,
+      "individual_macroF1": 0.49671771243283824,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.4526721102669463,
+      "individual_macroF1": 0.490174558297326,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.4458942044456842,
+      "individual_macroF1": 0.4891340162372192,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 100,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.45131438966387266,
+      "individual_macroF1": 0.4986540234220147,
+      "source": "repeated_cv_significance.py"
+    }
+  ],
+  "mooc": [
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.7887463277174891,
+      "individual_macroF1": 0.7734643153035863,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.7862288570279609,
+      "individual_macroF1": 0.7817296340023613,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.7952260151924665,
+      "individual_macroF1": 0.7842212391565452,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.763318098855686,
+      "individual_macroF1": 0.751327434757044,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.7848090870867714,
+      "individual_macroF1": 0.7727841325479177,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.7796305616990161,
+      "individual_macroF1": 0.7705055139784789,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.7410110223034665,
+      "individual_macroF1": 0.7372787140056266,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.7515889264029161,
+      "individual_macroF1": 0.7342979514348515,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.7355316930142979,
+      "individual_macroF1": 0.7288473371652079,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.6759368425810656,
+      "individual_macroF1": 0.6999550157444894,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.6898046887918823,
+      "individual_macroF1": 0.7044091156827063,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.688641890423483,
+      "individual_macroF1": 0.7017199061482098,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 42,
+      "fold": 0,
+      "stacking_macroF1": 0.5840459344389811,
+      "individual_macroF1": 0.644203413940256,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 42,
+      "fold": 1,
+      "stacking_macroF1": 0.5851559093030432,
+      "individual_macroF1": 0.6601302628777551,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 42,
+      "fold": 2,
+      "stacking_macroF1": 0.5736486659825552,
+      "individual_macroF1": 0.6608563369568663,
+      "source": "original_mooc_mi_stacking_partial.json"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.5938209728702978,
+      "individual_macroF1": 0.6529959424050615,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.5909375870716077,
+      "individual_macroF1": 0.6573551473607713,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.6165704180939073,
+      "individual_macroF1": 0.6497866115926375,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.5826423677317502,
+      "individual_macroF1": 0.6381195239849242,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.5872075423293996,
+      "individual_macroF1": 0.6644078558641187,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 1,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.5815198009137752,
+      "individual_macroF1": 0.6828884006046514,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.684885047915596,
+      "individual_macroF1": 0.7059277352119087,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.68044472688397,
+      "individual_macroF1": 0.7085838683795627,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.6803268439662011,
+      "individual_macroF1": 0.6902329403741371,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.6952607556230923,
+      "individual_macroF1": 0.708954719531426,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.6856578531748809,
+      "individual_macroF1": 0.6925152194560715,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 3,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.7006439063652827,
+      "individual_macroF1": 0.7092503346243588,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.7356132579789417,
+      "individual_macroF1": 0.7301306298381423,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.7329223841000547,
+      "individual_macroF1": 0.7405874229277684,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.7388339355515463,
+      "individual_macroF1": 0.7220687043994816,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.7457028516095632,
+      "individual_macroF1": 0.7351219442390708,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.740990407052113,
+      "individual_macroF1": 0.7224015916068897,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 7,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.731401737214949,
+      "individual_macroF1": 0.7249381090827296,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.7963392817540695,
+      "individual_macroF1": 0.7959401956508081,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.7655357092350321,
+      "individual_macroF1": 0.762956856139042,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.7745845891135712,
+      "individual_macroF1": 0.7667935070407064,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.774594714634688,
+      "individual_macroF1": 0.7698028675140877,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.7638424395215833,
+      "individual_macroF1": 0.7631272742523858,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 14,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.7781011760830057,
+      "individual_macroF1": 0.7655204828499712,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 142,
+      "fold": 0,
+      "stacking_macroF1": 0.7859865543106925,
+      "individual_macroF1": 0.7720105609392746,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 142,
+      "fold": 1,
+      "stacking_macroF1": 0.7902629653169753,
+      "individual_macroF1": 0.7905118528128317,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 142,
+      "fold": 2,
+      "stacking_macroF1": 0.7918950154582045,
+      "individual_macroF1": 0.7873586697861389,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 242,
+      "fold": 0,
+      "stacking_macroF1": 0.7950350272889879,
+      "individual_macroF1": 0.7893801839051636,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 242,
+      "fold": 1,
+      "stacking_macroF1": 0.7912557414938124,
+      "individual_macroF1": 0.775925370352031,
+      "source": "repeated_cv_significance.py"
+    },
+    {
+      "cutoff_day": 21,
+      "repeat_seed": 242,
+      "fold": 2,
+      "stacking_macroF1": 0.7813950523638635,
+      "individual_macroF1": 0.7839874920719205,
+      "source": "repeated_cv_significance.py"
+    }
+  ]
+}

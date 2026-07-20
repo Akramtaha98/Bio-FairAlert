@@ -1,0 +1,41 @@
+{
+  "disability_x_gender": {
+    "mean": 0.677634440031652,
+    "sd": 0.033013233826639954,
+    "min": 0.6313116157882797,
+    "max": 0.7146936255595,
+    "n_below_four_fifths": 5,
+    "n_splits": 5,
+    "reliable_cells_range": [
+      4,
+      4
+    ],
+    "total_cells": 4
+  },
+  "imd_band_x_gender": {
+    "mean": 0.3468935296754463,
+    "sd": 0.05792530198367158,
+    "min": 0.2568627450980392,
+    "max": 0.4040251916757941,
+    "n_below_four_fifths": 5,
+    "n_splits": 5,
+    "reliable_cells_range": [
+      22,
+      22
+    ],
+    "total_cells": 22
+  },
+  "disability_x_imd_band": {
+    "mean": 0.3969649493125843,
+    "sd": 0.040224347791278675,
+    "min": 0.3574001440806852,
+    "max": 0.462,
+    "n_below_four_fifths": 5,
+    "n_splits": 5,
+    "reliable_cells_range": [
+      21,
+      21
+    ],
+    "total_cells": 22
+  }
+}

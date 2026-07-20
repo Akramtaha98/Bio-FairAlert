@@ -1,0 +1,263 @@
+{
+  "disability_x_gender": {
+    "groups": {
+      "N x F": {
+        "n": 2074,
+        "flag_rate": 0.34667309546769526,
+        "reliable": true
+      },
+      "N x M": {
+        "n": 2638,
+        "flag_rate": 0.38741470811220624,
+        "reliable": true
+      },
+      "Y x F": {
+        "n": 270,
+        "flag_rate": 0.46296296296296297,
+        "reliable": true
+      },
+      "Y x M": {
+        "n": 196,
+        "flag_rate": 0.5612244897959183,
+        "reliable": true
+      }
+    },
+    "disparate_impact_ratio_reliable_cells": 0.6177084246515298,
+    "n_reliable_cells": 4,
+    "n_total_cells": 4
+  },
+  "imd_band_x_gender": {
+    "groups": {
+      "0-10% x F": {
+        "n": 246,
+        "flag_rate": 0.5772357723577236,
+        "reliable": true
+      },
+      "0-10% x M": {
+        "n": 226,
+        "flag_rate": 0.5575221238938053,
+        "reliable": true
+      },
+      "10-20 x F": {
+        "n": 262,
+        "flag_rate": 0.4198473282442748,
+        "reliable": true
+      },
+      "10-20 x M": {
+        "n": 266,
+        "flag_rate": 0.5,
+        "reliable": true
+      },
+      "20-30% x F": {
+        "n": 284,
+        "flag_rate": 0.4753521126760563,
+        "reliable": true
+      },
+      "20-30% x M": {
+        "n": 287,
+        "flag_rate": 0.445993031358885,
+        "reliable": true
+      },
+      "30-40% x F": {
+        "n": 271,
+        "flag_rate": 0.35424354243542433,
+        "reliable": true
+      },
+      "30-40% x M": {
+        "n": 312,
+        "flag_rate": 0.41346153846153844,
+        "reliable": true
+      },
+      "40-50% x F": {
+        "n": 249,
+        "flag_rate": 0.321285140562249,
+        "reliable": true
+      },
+      "40-50% x M": {
+        "n": 257,
+        "flag_rate": 0.43190661478599224,
+        "reliable": true
+      },
+      "50-60% x F": {
+        "n": 224,
+        "flag_rate": 0.24107142857142858,
+        "reliable": true
+      },
+      "50-60% x M": {
+        "n": 261,
+        "flag_rate": 0.4099616858237548,
+        "reliable": true
+      },
+      "60-70% x F": {
+        "n": 215,
+        "flag_rate": 0.34418604651162793,
+        "reliable": true
+      },
+      "60-70% x M": {
+        "n": 254,
+        "flag_rate": 0.37401574803149606,
+        "reliable": true
+      },
+      "70-80% x F": {
+        "n": 177,
+        "flag_rate": 0.3107344632768362,
+        "reliable": true
+      },
+      "70-80% x M": {
+        "n": 286,
+        "flag_rate": 0.35664335664335667,
+        "reliable": true
+      },
+      "80-90% x F": {
+        "n": 178,
+        "flag_rate": 0.2640449438202247,
+        "reliable": true
+      },
+      "80-90% x M": {
+        "n": 260,
+        "flag_rate": 0.34615384615384615,
+        "reliable": true
+      },
+      "90-100% x F": {
+        "n": 177,
+        "flag_rate": 0.20903954802259886,
+        "reliable": true
+      },
+      "90-100% x M": {
+        "n": 266,
+        "flag_rate": 0.2706766917293233,
+        "reliable": true
+      },
+      "MISSING x F": {
+        "n": 61,
+        "flag_rate": 0.22950819672131148,
+        "reliable": true
+      },
+      "MISSING x M": {
+        "n": 159,
+        "flag_rate": 0.24528301886792453,
+        "reliable": true
+      }
+    },
+    "disparate_impact_ratio_reliable_cells": 0.3621389353067557,
+    "n_reliable_cells": 22,
+    "n_total_cells": 22
+  },
+  "disability_x_imd_band": {
+    "groups": {
+      "N x 0-10%": {
+        "n": 425,
+        "flag_rate": 0.5788235294117647,
+        "reliable": true
+      },
+      "N x 10-20": {
+        "n": 463,
+        "flag_rate": 0.4427645788336933,
+        "reliable": true
+      },
+      "N x 20-30%": {
+        "n": 510,
+        "flag_rate": 0.43137254901960786,
+        "reliable": true
+      },
+      "N x 30-40%": {
+        "n": 518,
+        "flag_rate": 0.3745173745173745,
+        "reliable": true
+      },
+      "N x 40-50%": {
+        "n": 455,
+        "flag_rate": 0.36923076923076925,
+        "reliable": true
+      },
+      "N x 50-60%": {
+        "n": 445,
+        "flag_rate": 0.32808988764044944,
+        "reliable": true
+      },
+      "N x 60-70%": {
+        "n": 430,
+        "flag_rate": 0.3372093023255814,
+        "reliable": true
+      },
+      "N x 70-80%": {
+        "n": 430,
+        "flag_rate": 0.32790697674418606,
+        "reliable": true
+      },
+      "N x 80-90%": {
+        "n": 407,
+        "flag_rate": 0.3046683046683047,
+        "reliable": true
+      },
+      "N x 90-100%": {
+        "n": 413,
+        "flag_rate": 0.24455205811138014,
+        "reliable": true
+      },
+      "N x MISSING": {
+        "n": 216,
+        "flag_rate": 0.2361111111111111,
+        "reliable": true
+      },
+      "Y x 0-10%": {
+        "n": 47,
+        "flag_rate": 0.46808510638297873,
+        "reliable": true
+      },
+      "Y x 10-20": {
+        "n": 65,
+        "flag_rate": 0.5846153846153846,
+        "reliable": true
+      },
+      "Y x 20-30%": {
+        "n": 61,
+        "flag_rate": 0.7049180327868853,
+        "reliable": true
+      },
+      "Y x 30-40%": {
+        "n": 65,
+        "flag_rate": 0.47692307692307695,
+        "reliable": true
+      },
+      "Y x 40-50%": {
+        "n": 51,
+        "flag_rate": 0.45098039215686275,
+        "reliable": true
+      },
+      "Y x 50-60%": {
+        "n": 40,
+        "flag_rate": 0.375,
+        "reliable": true
+      },
+      "Y x 60-70%": {
+        "n": 39,
+        "flag_rate": 0.6153846153846154,
+        "reliable": true
+      },
+      "Y x 70-80%": {
+        "n": 33,
+        "flag_rate": 0.48484848484848486,
+        "reliable": true
+      },
+      "Y x 80-90%": {
+        "n": 31,
+        "flag_rate": 0.41935483870967744,
+        "reliable": true
+      },
+      "Y x 90-100%": {
+        "n": 30,
+        "flag_rate": 0.26666666666666666,
+        "reliable": true
+      },
+      "Y x MISSING": {
+        "n": 4,
+        "flag_rate": 0.5,
+        "reliable": false
+      }
+    },
+    "disparate_impact_ratio_reliable_cells": 0.3349483204134367,
+    "n_reliable_cells": 21,
+    "n_total_cells": 22
+  }
+}

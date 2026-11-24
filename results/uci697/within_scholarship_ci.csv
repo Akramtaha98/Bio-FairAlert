@@ -1,0 +1,91 @@
+run,checkpoint,quantity,value,lo,hi
+full feature set,C0,"TPR women, scholarship",0.27865165,0.19583332538604736,0.36750368326902355
+full feature set,C0,"TPR men, scholarship",0.29333335,0.1782574661076069,0.4146341383457184
+full feature set,C0,"TPR women, no scholarship",0.58256733,0.5491308763623237,0.6152675926685333
+full feature set,C0,"TPR men, no scholarship",0.7094512,0.6808651447296142,0.7377710267901421
+full feature set,C0,"gender contrast (men-women), scholarship holders",0.014681697,-0.13103861175477505,0.1580515362322329
+full feature set,C0,"gender contrast (men-women), no scholarship",0.12688386,0.08345126062631607,0.1699935123324394
+full feature set,C0,interaction (contrast holders - contrast non-holders),-0.11220217,-0.26424928829073907,0.03903641402721384
+full feature set,C0,"scholarship effect (no-sch - sch), women",0.30391568,0.20851740762591361,0.39219349846243856
+full feature set,C0,"scholarship effect (no-sch - sch), men",0.41611785,0.2925929553806782,0.533115892112255
+full feature set,C0,TPR scholarship holders (marginal),0.2835821,0.21679362766444682,0.3533851012587546
+full feature set,C0,TPR non-holders (marginal),0.6472417,0.6249995306134224,0.6690714359283447
+full feature set,C0,marginal scholarship TPR gap (non-holders - holders),0.36365962,0.2904000528156757,0.4344731479883194
+full feature set,C0,TPR women (marginal),0.545,0.5136361986398696,0.5763689875602722
+full feature set,C0,TPR men (marginal),0.6827389,0.6537442967295647,0.7108156651258468
+full feature set,C0,marginal gender TPR gap (men - women),0.13773888,0.09482612013816834,0.18027017861604688
+full feature set,C1,"TPR women, scholarship",0.3955056,0.30227273628115653,0.49166861549019797
+full feature set,C1,"TPR men, scholarship",0.51555556,0.3813953399658203,0.6510637998580933
+full feature set,C1,"TPR women, no scholarship",0.73851025,0.7078545361757278,0.7678411543369292
+full feature set,C1,"TPR men, no scholarship",0.7771341,0.7490136623382568,0.804191842675209
+full feature set,C1,"gender contrast (men-women), scholarship holders",0.12004995,-0.043073632568120954,0.2850689940154549
+full feature set,C1,"gender contrast (men-women), no scholarship",0.03862387,-0.0017269477248191831,0.07882428914308545
+full feature set,C1,interaction (contrast holders - contrast non-holders),0.081426084,-0.08500458002090454,0.2522244378924358
+full feature set,C1,"scholarship effect (no-sch - sch), women",0.34300464,0.2426262877881527,0.4408757410943508
+full feature set,C1,"scholarship effect (no-sch - sch), men",0.26157856,0.12375262677669525,0.3969277538359165
+full feature set,C1,TPR scholarship holders (marginal),0.43582088,0.3580645024776459,0.5132362470030783
+full feature set,C1,TPR non-holders (marginal),0.75819737,0.7375289142131806,0.778504928946495
+full feature set,C1,marginal scholarship TPR gap (non-holders - holders),0.3223765,0.2428670570254326,0.4028277210891247
+full feature set,C1,TPR women (marginal),0.69611114,0.6660079702734947,0.7254145205020904
+full feature set,C1,TPR men (marginal),0.7603424,0.7323859855532646,0.7877319037914275
+full feature set,C1,marginal gender TPR gap (men - women),0.06423128,0.023099878430366518,0.1052269324660301
+full feature set,C2,"TPR women, scholarship",0.50786513,0.41111111640930176,0.6025649279356002
+full feature set,C2,"TPR men, scholarship",0.60444444,0.4720000311732292,0.7315789461135864
+full feature set,C2,"TPR women, no scholarship",0.76069725,0.7306587859988213,0.790124599635601
+full feature set,C2,"TPR men, no scholarship",0.78689027,0.7592532068490982,0.8134762644767761
+full feature set,C2,"gender contrast (men-women), scholarship holders",0.09657931,-0.06632615029811859,0.2572848692536353
+full feature set,C2,"gender contrast (men-women), no scholarship",0.026193023,-0.013839291036128997,0.06664699465036392
+full feature set,C2,interaction (contrast holders - contrast non-holders),0.07038629,-0.09723745211958885,0.23556431531906125
+full feature set,C2,"scholarship effect (no-sch - sch), women",0.2528321,0.153449210524559,0.3534410640597341
+full feature set,C2,"scholarship effect (no-sch - sch), men",0.18244582,0.0515813484787941,0.3173361092805862
+full feature set,C2,TPR scholarship holders (marginal),0.5402985,0.4616663306951523,0.6163934469223022
+full feature set,C2,TPR non-holders (marginal),0.77404815,0.7539411470293998,0.7940579250454902
+full feature set,C2,marginal scholarship TPR gap (non-holders - holders),0.23374963,0.15566400736570357,0.3146603383123872
+full feature set,C2,TPR women (marginal),0.72944444,0.6995950669050217,0.7581213012337684
+full feature set,C2,TPR men (marginal),0.7751783,0.7478620409965515,0.801490418612957
+full feature set,C2,marginal gender TPR gap (men - women),0.04573387,0.005828945338726044,0.0858416825532913
+without Debtor/Tuition,C0,"TPR women, scholarship",0.112359546,0.060283686965703964,0.17143207751214473
+without Debtor/Tuition,C0,"TPR men, scholarship",0.22222222,0.12777481526136397,0.3255814015865326
+without Debtor/Tuition,C0,"TPR women, no scholarship",0.5118859,0.4797744877636433,0.5442299112677574
+without Debtor/Tuition,C0,"TPR men, no scholarship",0.70528454,0.6774189502000809,0.7332332894206047
+without Debtor/Tuition,C0,"gender contrast (men-women), scholarship holders",0.10986268,-0.0012373816221952414,0.2266244687139987
+without Debtor/Tuition,C0,"gender contrast (men-women), no scholarship",0.19339865,0.1505642667412758,0.2356014236807823
+without Debtor/Tuition,C0,interaction (contrast holders - contrast non-holders),-0.08353598,-0.20296772606670857,0.04037360213696953
+without Debtor/Tuition,C0,"scholarship effect (no-sch - sch), women",0.39952633,0.3325780488550663,0.4609360747039318
+without Debtor/Tuition,C0,"scholarship effect (no-sch - sch), men",0.48306233,0.37583527714014053,0.5825764343142509
+without Debtor/Tuition,C0,TPR scholarship holders (marginal),0.14925374,0.10144928097724915,0.20155194252729403
+without Debtor/Tuition,C0,TPR non-holders (marginal),0.6104636,0.5884552955627441,0.6326534628868102
+without Debtor/Tuition,C0,marginal scholarship TPR gap (non-holders - holders),0.4612099,0.4036553829908371,0.5140254020690918
+without Debtor/Tuition,C0,TPR women (marginal),0.4625,0.43189204931259156,0.4934687614440918
+without Debtor/Tuition,C0,TPR men (marginal),0.67427486,0.6460015431046486,0.702741926908493
+without Debtor/Tuition,C0,marginal gender TPR gap (men - women),0.21177486,0.16958635300397873,0.2530280470848083
+without Debtor/Tuition,C1,"TPR women, scholarship",0.3220974,0.23255813121795654,0.41379308700561523
+without Debtor/Tuition,C1,"TPR men, scholarship",0.45925927,0.32499998807907104,0.5947712659835815
+without Debtor/Tuition,C1,"TPR women, no scholarship",0.6920233,0.6598529532551766,0.7237376824021339
+without Debtor/Tuition,C1,"TPR men, no scholarship",0.7688008,0.7394325435161591,0.7971230328083039
+without Debtor/Tuition,C1,"gender contrast (men-women), scholarship holders",0.13716188,-0.026515867561101913,0.301171851158142
+without Debtor/Tuition,C1,"gender contrast (men-women), no scholarship",0.07677752,0.03435606360435486,0.11951412856578826
+without Debtor/Tuition,C1,interaction (contrast holders - contrast non-holders),0.060384363,-0.10712949037551879,0.2284735895693299
+without Debtor/Tuition,C1,"scholarship effect (no-sch - sch), women",0.3699259,0.27388407438993456,0.4642667278647422
+without Debtor/Tuition,C1,"scholarship effect (no-sch - sch), men",0.30954152,0.17112920433282852,0.44690592661499967
+without Debtor/Tuition,C1,TPR scholarship holders (marginal),0.3681592,0.29251399338245393,0.4444444179534912
+without Debtor/Tuition,C1,TPR non-holders (marginal),0.7311578,0.709519337117672,0.7524887561798096
+without Debtor/Tuition,C1,marginal scholarship TPR gap (non-holders - holders),0.36299857,0.2844240769743919,0.44215841591358174
+without Debtor/Tuition,C1,TPR women (marginal),0.64629626,0.6149336948990822,0.6777188181877136
+without Debtor/Tuition,C1,TPR men (marginal),0.74893016,0.7199207708239556,0.7772968828678131
+without Debtor/Tuition,C1,marginal gender TPR gap (men - women),0.10263389,0.06017250120639801,0.1452167674899101
+without Debtor/Tuition,C2,"TPR women, scholarship",0.4494382,0.3523809611797333,0.5460992455482483
+without Debtor/Tuition,C2,"TPR men, scholarship",0.60740745,0.4715447425842285,0.739130437374115
+without Debtor/Tuition,C2,"TPR women, no scholarship",0.7311146,0.6991502568125725,0.7622626319527626
+without Debtor/Tuition,C2,"TPR men, no scholarship",0.776931,0.7487485900521278,0.8040347188711167
+without Debtor/Tuition,C2,"gender contrast (men-women), scholarship holders",0.15796924,-0.008995929360389709,0.323053242266178
+without Debtor/Tuition,C2,"gender contrast (men-women), no scholarship",0.045816362,0.004626099765300752,0.08818603605031966
+without Debtor/Tuition,C2,interaction (contrast holders - contrast non-holders),0.112152874,-0.05948138386011123,0.28192831575870475
+without Debtor/Tuition,C2,"scholarship effect (no-sch - sch), women",0.2816764,0.1806425616145134,0.3827177077531813
+without Debtor/Tuition,C2,"scholarship effect (no-sch - sch), men",0.16952354,0.03565887361764908,0.30663878396153443
+without Debtor/Tuition,C2,TPR scholarship holders (marginal),0.5024876,0.42316558212041855,0.5806451439857483
+without Debtor/Tuition,C2,TPR non-holders (marginal),0.7544677,0.7332806587219238,0.7753050282597541
+without Debtor/Tuition,C2,marginal scholarship TPR gap (non-holders - holders),0.25198013,0.1710553675889969,0.33360475897788977
+without Debtor/Tuition,C2,TPR women (marginal),0.6962963,0.6647644490003586,0.7271141156554222
+without Debtor/Tuition,C2,TPR men (marginal),0.7660485,0.738227128982544,0.7930577829480171
+without Debtor/Tuition,C2,marginal gender TPR gap (men - women),0.06975222,0.028352448344230653,0.11160788387060164

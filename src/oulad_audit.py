@@ -50,6 +50,8 @@ IMD_LOW = ["0-10%", "10-20", "20-30%"]
 TARGETS = ["gender", "disability", "imd_band", "gd"]
 COMPONENTS = {"gd": {"gender", "disability"}, "gi": {"gender", "imd_band"}}
 METRICS = ["dir", "tpr_gap", "fpr_gap", "eo"]
+SCORE_COLS = ["mean_score", "weighted_mean_score"]
+KNOWN_IMD_ONLY = False
 
 
 def log(m):
@@ -60,6 +62,8 @@ def log(m):
 def load_table(cutoff):
     from features import build_feature_table
     df, fc, tc, gc = build_feature_table(cutoff_day=cutoff)
+    if KNOWN_IMD_ONLY:
+        df = df[df["imd_band"].notna()]
     df = df.reset_index(drop=True)
     y = df[tc].isin(["Fail", "Withdrawn"]).astype(int).values
     return df, y
@@ -113,14 +117,15 @@ def groupings(df):
         s = df[a].astype(object).where(df[a].notna(), "MISSING")
         g[a] = pd.factorize(s, sort=True)[0]
     g["gd"] = g["gender"] * 2 + g["disability"]
-    g["gi"] = g["gender"] * 2 + df["imd_band"].isin(IMD_LOW).astype(int).values
+    imd_lvl = np.where(df["imd_band"].isna(), 2, df["imd_band"].isin(IMD_LOW).astype(int)).astype(int)   # 0 = IMD>=30%, 1 = IMD<30%, 2 = IMD unknown
+    g["gi"] = g["gender"] * 3 + imd_lvl
     labels = {}
     for a in ["gender", "disability", "imd_band", "age_band"]:
         s = df[a].astype(object).where(df[a].notna(), "MISSING")
         labels[a] = list(pd.factorize(s, sort=True)[1])
     labels["gd"] = [f"{x}/{y}" for x in labels["gender"] for y in labels["disability"]] if len(labels["disability"]) == 2 \
         else [str(i) for i in range(4)]
-    labels["gi"] = [f"{x}/{y}" for x in labels["gender"] for y in ("IMD>=30%", "IMD<30%")]
+    labels["gi"] = [f"{x}/{y}" for x in labels["gender"] for y in ("IMD>=30%", "IMD<30%", "IMD unknown")]
     return g, labels
 
 
@@ -343,6 +348,19 @@ def audit(y, sidx, preds, g, labels, targets, base, a, eng, out, tag):
             f"better={((~sdf.worse) & (sdf.q_bh_side<0.05)).sum()}")
     df.to_csv(f"{out}/{tag}_fairness.csv", index=False)
 
+    # baseline group table: every group of every grouping with n, positives, flag rate, TPR, FPR (+ CIs)
+    grows = []
+    for gn in gl:
+        for j, i in enumerate(gidx[gn]):
+            lab = labels[gn][j] if j < len(labels[gn]) else str(j)
+            row = dict(grouping=gn, group=lab, n=int(n_[0, i]), pos=int(pos_[0, i]), neg=int(neg_[0, i]), eligible_flag=bool(elig_flag[i]))
+            for key, nm in [("_flag", "flag"), ("_tpr", "tpr"), ("_fpr", "fpr")]:
+                v = per[base][gn][key][:, j]
+                lo, hi = ci(v)
+                row.update({nm: v[0], nm + "_lo": lo, nm + "_hi": hi})
+            grows.append(row)
+    pd.DataFrame(grows).to_csv(f"{out}/{tag}_groups.csv", index=False)
+
     # cell-level table (gender x disability, gender x IMD<30%): n, positives, TPR/FPR with CIs and paired changes
     cells = []
     for gn in ["gd", "gi"]:
@@ -401,6 +419,22 @@ def run_heldout(ck, a, out):
     sidx = pd.factorize(df["id_student"].values[te])[0]
     eng = Engine(a.B, a.seed, a.device, int(sidx.max()) + 1)
     audit(y[te], sidx, preds, gte, {k: labels[k] for k in labels}, TARGETS, "baseline", a, eng, out, f"heldout_C{ck}")
+    # fixed outreach capacity: every method flags the same NUMBER of students as the baseline (top-k by its own score)
+    kcap = int(prim["baseline"][0].sum())
+    fc = {}
+    for m_ in methods:
+        sc = prim[m_][1].astype(np.float64)
+        order = np.lexsort((np.arange(len(sc)), -sc))
+        pk = np.zeros(len(sc), np.int8)
+        pk[order[:kcap]] = 1
+        fc[m_] = pk[None, :]
+    audit(y[te], sidx, fc, gte, {k: labels[k] for k in labels}, TARGETS, "baseline", a, eng, out, f"heldout_C{ck}_fixedcap")
+    # fairness for every retraining seed (same test cohort); bootstrap with a smaller B
+    if a.seed_B > 0 and len(seeds) > 1:
+        engs = Engine(a.seed_B, a.seed, a.device, int(sidx.max()) + 1)
+        for s, r_ in zip(seeds, res):
+            pr_ = {m_: r_[m_][0][None, :] for m_ in r_}
+            audit(y[te], sidx, pr_, gte, {k: labels[k] for k in labels}, TARGETS, "baseline", a, engs, out, f"heldout_C{ck}_seed{s}")
     json.dump(dict(cutoff=ck, n_train=len(tr), n_val=len(va), n_test=len(te), train_pres=a.train_pres,
                    val_pres=a.val_pres, test_pres=a.test_pres, seeds=seeds, B=a.B), open(f"{out}/heldout_C{ck}_config.json", "w"), indent=2)
 
@@ -457,11 +491,18 @@ def main():
     p.add_argument("--inproc", type=int, default=1)
     p.add_argument("--eg_iter", type=int, default=30)
     p.add_argument("--cv_targets", default="gender")
+    p.add_argument("--seed_B", type=int, default=2000, help="heldout: bootstrap replicates for the per-seed fairness audits (0 = skip)")
+    p.add_argument("--no_scores", type=int, default=0, help="1 = drop score-based features (mean_score, weighted_mean_score); keeps submission timing/counts")
+    p.add_argument("--known_imd", type=int, default=0, help="1 = keep only students with a recorded IMD band")
     p.add_argument("--cv_thr", type=int, default=0, help="cv: 1 = tune the macro-F1 decision threshold on the calibration split (same procedure as the held-out run); 0 = fixed 0.5")
     p.add_argument("--train_pres", default="2013B,2013J")
     p.add_argument("--val_pres", default="2014B")
     p.add_argument("--test_pres", default="2014J")
     a = p.parse_args()
+    global KNOWN_IMD_ONLY
+    KNOWN_IMD_ONLY = bool(a.known_imd)
+    if a.no_scores:
+        NUM[:] = [c for c in NUM if c not in SCORE_COLS]
     os.makedirs(a.out, exist_ok=True)
     t0 = time.time()
     for ck in [int(x) for x in a.cutoffs.split(",")]:

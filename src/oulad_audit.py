@@ -412,7 +412,7 @@ def cv_rep(r, X, y, g, sid, cols, a):
     def one(k, tr, te):
         gss = GroupShuffleSplit(n_splits=1, test_size=0.25, random_state=a.seed + 100 * r + k)
         a_i, c_i = next(gss.split(tr, groups=sid[tr]))
-        res = fit_methods(X, y, g, tr[a_i], None, tr[c_i], te, cols, a.cv_targets.split(","), a, a.seed + 100 * r + k, False)
+        res = fit_methods(X, y, g, tr[a_i], tr[c_i] if a.cv_thr else None, tr[c_i], te, cols, a.cv_targets.split(","), a, a.seed + 100 * r + k, bool(a.cv_thr))
         return te, res
     outs = Parallel(n_jobs=a.n_jobs)(delayed(one)(k, tr, te) for k, (tr, te) in enumerate(folds))
     preds = {}
@@ -457,6 +457,7 @@ def main():
     p.add_argument("--inproc", type=int, default=1)
     p.add_argument("--eg_iter", type=int, default=30)
     p.add_argument("--cv_targets", default="gender")
+    p.add_argument("--cv_thr", type=int, default=0, help="cv: 1 = tune the macro-F1 decision threshold on the calibration split (same procedure as the held-out run); 0 = fixed 0.5")
     p.add_argument("--train_pres", default="2013B,2013J")
     p.add_argument("--val_pres", default="2014B")
     p.add_argument("--test_pres", default="2014J")

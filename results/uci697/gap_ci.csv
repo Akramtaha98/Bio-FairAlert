@@ -1,0 +1,49 @@
+run,checkpoint,quantity,value,lo,hi,repeats
+"full feature set, 5 repeats",C0,TPR women+scholarship,0.27865165,0.19583332538604736,0.36750368326902355,5
+"full feature set, 5 repeats",C0,"TPR men, no scholarship",0.7094512,0.6808651447296142,0.7377710267901421,5
+"full feature set, 5 repeats",C0,gap (men-no-sch minus women+sch),0.43079954,0.33781015276908877,0.519119544327259,5
+"full feature set, 5 repeats",C0,macro-F1,0.71547693,0.7036304950714112,0.7270550936460495,5
+"full feature set, repeats 0-2 (identical folds)",C0,TPR women+scholarship,0.27340823,0.190476194024086,0.36334091946482594,3
+"full feature set, repeats 0-2 (identical folds)",C0,"TPR men, no scholarship",0.703252,0.6738019272685051,0.7322836205363273,3
+"full feature set, repeats 0-2 (identical folds)",C0,gap (men-no-sch minus women+sch),0.42984378,0.33610778450965884,0.5184224963188171,3
+"full feature set, repeats 0-2 (identical folds)",C0,macro-F1,0.7148977,0.7026620924472808,0.7270309016108513,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C0,TPR women+scholarship,0.112359546,0.060283686965703964,0.17143207751214473,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C0,"TPR men, no scholarship",0.70528454,0.6774189502000809,0.7332332894206047,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C0,gap (men-no-sch minus women+sch),0.592925,0.5281325489282608,0.6527883619070053,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C0,macro-F1,0.66040343,0.6481867432594299,0.6726274847984314,3
+paired: no-timing minus full (identical folds),C0,change in TPR women+scholarship,-0.16104868,-0.2441328249871731,-0.08503233827650561,3
+paired: no-timing minus full (identical folds),C0,"change in TPR men, no scholarship",0.0020325184,-0.02355368435382843,0.027647317945957185,3
+paired: no-timing minus full (identical folds),C0,change in gap,0.16308123,0.08207720965147018,0.24925387501716612,3
+paired: no-timing minus full (identical folds),C0,change in macro-F1,-0.05449426,-0.06486430615186692,-0.04388010352849961,3
+"full feature set, 5 repeats",C1,TPR women+scholarship,0.3955056,0.30227273628115653,0.49166861549019797,5
+"full feature set, 5 repeats",C1,"TPR men, no scholarship",0.7771341,0.7490136623382568,0.804191842675209,5
+"full feature set, 5 repeats",C1,gap (men-no-sch minus women+sch),0.3816285,0.2809231787919998,0.47918882220983505,5
+"full feature set, 5 repeats",C1,macro-F1,0.810262,0.7992792099714279,0.8209454178810119,5
+"full feature set, repeats 0-2 (identical folds)",C1,TPR women+scholarship,0.37827715,0.2857142686843872,0.4748438633978366,3
+"full feature set, repeats 0-2 (identical folds)",C1,"TPR men, no scholarship",0.7708333,0.7419820949435234,0.7988231137394904,3
+"full feature set, repeats 0-2 (identical folds)",C1,gap (men-no-sch minus women+sch),0.39255616,0.2907017707824707,0.48905594348907466,3
+"full feature set, repeats 0-2 (identical folds)",C1,macro-F1,0.81138927,0.8001251384615898,0.8224716559052467,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C1,TPR women+scholarship,0.3220974,0.23255813121795654,0.41379308700561523,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C1,"TPR men, no scholarship",0.7688008,0.7394325435161591,0.7971230328083039,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C1,gap (men-no-sch minus women+sch),0.4467034,0.3510279543697834,0.5412297412753104,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C1,macro-F1,0.7860956,0.7744199395179748,0.7974674090743065,3
+paired: no-timing minus full (identical folds),C1,change in TPR women+scholarship,-0.056179762,-0.11881187558174133,2.9802322387695312e-08,3
+paired: no-timing minus full (identical folds),C1,"change in TPR men, no scholarship",-0.0020325184,-0.02272731214761734,0.01831521540880202,3
+paired: no-timing minus full (identical folds),C1,change in gap,0.054147243,-0.00664774179458618,0.12014287188649161,3
+paired: no-timing minus full (identical folds),C1,change in macro-F1,-0.025293648,-0.03314830809831619,-0.01757564991712571,3
+"full feature set, 5 repeats",C2,TPR women+scholarship,0.50786513,0.41111111640930176,0.6025649279356002,5
+"full feature set, 5 repeats",C2,"TPR men, no scholarship",0.78689027,0.7592532068490982,0.8134762644767761,5
+"full feature set, 5 repeats",C2,gap (men-no-sch minus women+sch),0.27902514,0.18048428297042848,0.37906895875930785,5
+"full feature set, 5 repeats",C2,macro-F1,0.83169556,0.821230985224247,0.8420242682099343,5
+"full feature set, repeats 0-2 (identical folds)",C2,TPR women+scholarship,0.505618,0.4044944040477276,0.6054484456777567,3
+"full feature set, repeats 0-2 (identical folds)",C2,"TPR men, no scholarship",0.78404474,0.7555197715759278,0.8114837765693664,3
+"full feature set, repeats 0-2 (identical folds)",C2,gap (men-no-sch minus women+sch),0.27842677,0.1752148762345314,0.3824048094451427,3
+"full feature set, repeats 0-2 (identical folds)",C2,macro-F1,0.83157426,0.8208266705274582,0.8422711715102196,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C2,TPR women+scholarship,0.4494382,0.3523809611797333,0.5460992455482483,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C2,"TPR men, no scholarship",0.776931,0.7487485900521278,0.8040347188711167,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C2,gap (men-no-sch minus women+sch),0.32749277,0.22707629650831224,0.42865317612886417,3
+"without Debtor/Tuition-up-to-date, 3 repeats",C2,macro-F1,0.8126022,0.801378981769085,0.8234680891036987,3
+paired: no-timing minus full (identical folds),C2,change in TPR women+scholarship,-0.056179762,-0.11904764175415039,0.0030073493719097208,3
+paired: no-timing minus full (identical folds),C2,"change in TPR men, no scholarship",-0.0071137547,-0.027120856940746306,0.012550118565559387,3
+paired: no-timing minus full (identical folds),C2,change in gap,0.049066007,-0.012805567681789398,0.1149769552052019,3
+paired: no-timing minus full (identical folds),C2,change in macro-F1,-0.01897204,-0.02620788663625717,-0.011926552653312687,3

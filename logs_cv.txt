@@ -1,0 +1,7 @@
+21:24:02 [cv C75] n=25902 students=23651 at-risk=0.406
+21:24:02   repeat 1/5
+21:24:18   repeat 2/5
+21:24:33   repeat 3/5
+21:24:48   repeat 4/5
+21:25:01   repeat 5/5
+21:25:16 bootstrap device: cpu

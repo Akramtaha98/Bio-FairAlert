@@ -54,6 +54,7 @@ Both datasets are public and are not redistributed in this repository. Download 
 |---|---|---|---|
 | OULAD | [analyse.kmi.open.ac.uk/open-dataset](https://analyse.kmi.open.ac.uk/open-dataset) | `studentInfo.csv`, `studentRegistration.csv`, `studentAssessment.csv`, `assessments.csv`, `courses.csv` | `data/oulad/` (or `OULAD_DATA_DIR`) |
 | MOOC User Action Dataset | [snap.stanford.edu/data/act-mooc.html](https://snap.stanford.edu/data/act-mooc.html) | `mooc_actions.tsv`, `mooc_action_features.tsv`, `mooc_action_labels.tsv` | `data/mooc_raw/act-mooc/` (or `MOOC_RAW_DIR`) |
+| UCI Predict Students' Dropout and Academic Success (external validation, CC BY 4.0) | [UCI ID 697, DOI 10.24432/C5MC89](https://doi.org/10.24432/C5MC89) | `data.csv` (downloaded automatically by `uci697_external_validation.py`) | `data/uci697/` (or `--data` / `--data_dir`) |
 
 ## Project structure
 
@@ -87,6 +88,7 @@ Bio-FairAlert/
         explain_oulad.py              Figures 5, 7
         explain_mooc.py
         explanation_stability.py
+        uci697_external_validation.py External validation, fairness audit and explainability on UCI-697
         make_arch_figures_v2.py       Figures 1, 2
         make_arch_figures.py          superseded, kept for the record
         make_plots.py                 shared plotting helpers
@@ -150,6 +152,20 @@ Bio-FairAlert/
 |---|---|
 | `explain_oulad.py`, `explain_mooc.py` | SHAP, LIME, and rule-based explanations for both case studies. |
 | `explanation_stability.py` | Perturbation-stability, deletion-test, permutation-importance, and cross-split explanation-overlap tests (Section 4.3). |
+
+### External validation on a third dataset (UCI-697)
+
+| Script | Purpose |
+|---|---|
+| `uci697_external_validation.py` | Single self-contained script, four stages (`--stages main,ksweep,fairness,explain`). `main`: RandomForest, XGBoost, LightGBM and a stacking hybrid of the three, each with and without the MI top-12 filter, at three checkpoints (C0 enrolment, C1 +1st semester, C2 +2nd semester), 5x5 repeated CV with Nadeau-Bengio corrected CIs and Holm-corrected paired tests. `ksweep`: MI vs ANOVA filter and k sensitivity. `fairness`: at-risk (Dropout) audit over gender, age (23+), scholarship, special needs and international status, with exclusion of protected attributes, reweighing, equalized-odds post-processing and in-processing, a gender x scholarship joint target, the cross-attribute side-effect matrix, an intersectional audit, and student-level bootstrap CIs. `explain`: SHAP rank stability, SHAP vs permutation agreement, deletion test. |
+
+```bash
+cd src
+python uci697_external_validation.py --quick --n_jobs 4      # smoke test, a few minutes
+python uci697_external_validation.py --n_jobs 32             # full run -> results/uci697/
+```
+
+Output (CSV, LaTeX tables, `config.json`, `report.md`) is written to `results/uci697/`. The data are downloaded to `data/uci697/` on first run (git-ignored). The data are small, so a GPU is not needed; the script parallelises over CV folds on CPU cores.
 
 ### Figures
 

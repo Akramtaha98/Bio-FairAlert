@@ -56,8 +56,8 @@ def tab_tests(res, out):
     order = []
     for m in MODEL_ORDER:
         order.append((f"filter effect (MI - none) | {m}", f"MI filter vs.\\ none, {m}"))
-    order.append(("Hybrid-Stack - best individual (XGBoost) | filter=none", "Hybrid vs.\\ best single (XGBoost), no filter"))
-    order.append(("Hybrid-Stack - best individual (XGBoost) | filter=mi", "Hybrid vs.\\ best single (XGBoost), MI filter"))
+    order.append(("Hybrid-Stack - best individual (XGBoost) | filter=none", "Hybrid vs.\\ best single model (XGBoost), no filter"))
+    order.append(("Hybrid-Stack - best individual (XGBoost) | filter=mi", "Hybrid vs.\\ best single model (XGBoost), MI filter"))
     rows = []
     for key, lab in order:
         cells = []
@@ -230,18 +230,102 @@ def tab_explain(res, out):
     write(f"{out}/tab_uci_explain.tex", s)
 
 
+def tab_checkpoint(data, out):
+    df = pd.read_csv(data, sep=None, engine="python")
+    dr = df[df["Target"] == "Dropout"]
+    c1, c2 = "Curricular units 1st sem (evaluations)", "Curricular units 2nd sem (evaluations)"
+    n1, n2 = int((dr[c1] == 0).sum()), int((dr[c2] == 0).sum())
+    nb = int(((dr[c1] == 0) & (dr[c2] == 0)).sum())
+    nd = len(dr)
+    rows = [
+        f"C0 & 24 & Demographics, application route, macro-economic indicators, \\emph{{Debtor}}, \\emph{{Tuition fees up to date}} & -- & No \\\\",
+        f"C1 & 30 & C0 + first-semester units (enrolled, evaluated, approved, grade) & {n1} ({100*n1/nd:.1f}\\%) & No \\\\",
+        f"C2 & 36 & C1 + second-semester units & {n2} ({100*n2/nd:.1f}\\%); both semesters: {nb} ({100*nb/nd:.1f}\\%) & No \\\\",
+    ]
+    s = ("\\begin{table}[t]\n\\centering\n\\footnotesize\n"
+         "\\caption{UCI-697 checkpoint audit. All 4,424 students are used at every checkpoint, including those who may already have left; the dataset gives no decision dates, "
+         "withdrawal dates, or recording dates for financial fields, so ``checkpoint'' means information content, not a verified calendar date. "
+         f"The proxy column counts the {nd:,} dropouts with zero evaluations in the checkpoint's semester, i.e.\\ students who may already have disengaged and could not have been offered timely outreach.}}\n"
+         "\\label{tab:uci_checkpoint}\n\\resizebox{\\textwidth}{!}{\\begin{tabular}{llp{5.2cm}p{3.6cm}c}\n\\toprule\n"
+         "Checkpoint & Features & Information used & Dropouts with no evaluations (proxy) & Dates documented \\\\\n\\midrule\n"
+         + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}}\n\\end{table}\n")
+    write(f"{out}/tab_uci_checkpoint.tex", s)
+
+
+def tab_timing(res, res_nt, out):
+    a = pd.read_csv(f"{res}/main_summary.csv")
+    b = pd.read_csv(f"{res_nt}/main_summary.csv")
+    a = a[(a.model == "LightGBM") & (a["filter"] == "none")]
+    ca = pd.read_csv(f"{res}/reanalysis_cells.csv")
+    cb = pd.read_csv(f"{res_nt}/reanalysis_cells_notiming.csv")
+    ka = pd.read_csv(f"{res}/reanalysis_criteria.csv")
+    kb = pd.read_csv(f"{res_nt}/reanalysis_criteria_notiming.csv")
+    rows = []
+    for ck in ["C0", "C1", "C2"]:
+        for lab, m, cc, kk in [("All features", a, ca, ka), ("Without Debtor, Tuition fees up to date", b, cb, kb)]:
+            r = m[m.checkpoint == ck].iloc[0]
+            x = cc[(cc.checkpoint == ck) & (cc.family == "threshold_eo")].set_index("cell")
+            tw, tm = x.loc["Woman, scholarship", "tpr_base"], x.loc["Man, no scholarship", "tpr_base"]
+            eo = kk[(kk.checkpoint == ck) & (kk.family == "threshold_eo") & (kk.target == "joint")].iloc[0].eo_diff_base
+            rows.append(f"{ck} & {lab} & {r.macro_f1:.3f} & {r.auroc_dropout:.3f} & {tw:.3f} & {tm:.3f} & {eo:.3f} \\\\")
+        rows.append("\\addlinespace")
+    s = ("\\begin{table}[t]\n\\centering\n\\small\n"
+         "\\caption{Timing sensitivity (LightGBM, no filter). Removing the two financial fields whose recording date is undocumented lowers accuracy but not the main audit finding. "
+         "Three-class macro-F1 and Dropout AUROC; baseline TPR of the two extreme gender$\\times$scholarship cells; four-cell equalized-odds difference. "
+         "Full-feature rows use $5\\times5$ resampling, restricted rows $3\\times5$.}\n\\label{tab:uci_timing}\n"
+         "\\resizebox{\\textwidth}{!}{\\begin{tabular}{llccccc}\n\\toprule\n"
+         "Checkpoint & Feature set & Macro-F1 & AUROC & TPR, women with scholarship & TPR, men without & Four-cell EO diff. \\\\\n\\midrule\n"
+         + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}}\n\\end{table}\n")
+    write(f"{out}/tab_uci_timing.tex", s)
+
+
+def fig_tradeoff(res, figdir):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    plt.rcParams.update({"font.size": 9, "font.family": "serif"})
+    c = pd.read_csv(f"{res}/reanalysis_criteria.csv")
+    fig, ax = plt.subplots(1, 2, figsize=(7.2, 3.0), sharey=False)
+    mk = {"reweigh": ("o", "0.65", "Reweighing"), "expgrad_eo": ("s", "0.4", "Exp. gradient"), "threshold_eo": ("^", "k", "Threshold opt.")}
+    for j, ck in enumerate(["C0", "C2"]):
+        x = c[c.checkpoint == ck]
+        for fam, (m, col, lab) in mk.items():
+            y = x[x.family == fam]
+            ax[j].scatter(y.f1, -y.eo_diff, marker=m, s=42, color=col, edgecolor="k", label=lab)
+            for _, r in y.iterrows():
+                ax[j].annotate({"gender": "G", "age_mature": "A", "scholarship": "S", "joint": "GxS"}[r.target], (r.f1, -r.eo_diff),
+                               fontsize=6.5, xytext=(3, 3), textcoords="offset points")
+        ax[j].axvline(0, color="0.7", lw=0.8)
+        ax[j].set_title({"C0": "C0 (enrolment-time information)", "C2": "C2 (retrospective)"}[ck])
+        ax[j].set_xlabel("$\\Delta$ macro-F1 vs. baseline")
+    ax[0].set_ylabel("Reduction in EO difference\n(targeted grouping)")
+    h, l = ax[0].get_legend_handles_labels()
+    fig.legend(h, l, loc="lower center", ncol=3, frameon=False, fontsize=8)
+    plt.tight_layout(rect=(0, 0.08, 1, 1))
+    plt.savefig(f"{figdir}/fig_uci_tradeoff.pdf")
+    plt.savefig(f"{figdir}/fig_uci_tradeoff.png", dpi=200)
+    print("wrote fig_uci_tradeoff")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--res", default="../results/uci697")
     ap.add_argument("--data", default="../data/uci697/data.csv")
     ap.add_argument("--out", default="../../writing/tables")
+    ap.add_argument("--figdir", default="../../writing/figures")
+    ap.add_argument("--res_nt", default=None, help="results folder of the timing-sensitivity run (optional)")
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     tab_main(a.res, a.out)
     tab_tests(a.res, a.out)
     tab_ksweep(a.res, a.out)
     tab_fair(a.res, a.out)
-    tab_side(a.res, a.out)
+    # tab_side / tab_cells (older versions) superseded by reanalysis_uci697.py (tab_uci_multi, tab_uci_cells)
     tab_inter(a.res, a.out)
-    tab_cells(a.res, a.data, a.out)
     tab_explain(a.res, a.out)
+    tab_checkpoint(a.data, a.out)
+    if os.path.exists(f"{a.res}/reanalysis_criteria.csv"):
+        os.makedirs(a.figdir, exist_ok=True)
+        fig_tradeoff(a.res, a.figdir)
+    if a.res_nt and os.path.exists(f"{a.res_nt}/reanalysis_criteria_notiming.csv"):
+        tab_timing(a.res, a.res_nt, a.out)

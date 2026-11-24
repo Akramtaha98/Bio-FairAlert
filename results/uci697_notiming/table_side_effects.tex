@@ -1,0 +1,52 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Cross-attribute side effects of fairness mitigations (checkpoint C2). DIR = min/max flag-rate ratio; $\Delta$ vs.\ baseline with 95\% student-level bootstrap CI; $^{*}$ CI excludes 0.}
+\label{tab:uci697_side_effects}
+\begin{tabular}{lllrrl}
+\toprule
+Mitigation & Target & Audited & DIR before & DIR after & $\Delta$ [95\% CI] \\
+\midrule
+reweigh & age_mature & age mature & 0.393 & 0.467 & +0.074 [+0.062, +0.086]$^{*}$ \\
+reweigh & age_mature & gender & 0.531 & 0.529 & -0.003 [-0.013, +0.009] \\
+reweigh & age_mature & international & 0.974 & 0.902 & -0.031 [-0.122, +0.075] \\
+reweigh & age_mature & scholarship & 0.251 & 0.269 & +0.019 [+0.009, +0.031]$^{*}$ \\
+reweigh & age_mature & special needs & 0.923 & 0.936 & +0.006 [-0.045, +0.077] \\
+reweigh & gender & age mature & 0.393 & 0.392 & -0.002 [-0.010, +0.006] \\
+reweigh & gender & gender & 0.531 & 0.542 & +0.012 [+0.001, +0.022]$^{*}$ \\
+reweigh & gender & international & 0.974 & 0.944 & -0.007 [-0.057, +0.055] \\
+reweigh & gender & scholarship & 0.251 & 0.249 & -0.002 [-0.012, +0.008] \\
+reweigh & gender & special needs & 0.923 & 0.923 & +0.003 [-0.068, +0.079] \\
+reweigh & joint & age mature & 0.393 & 0.394 & +0.001 [-0.009, +0.010] \\
+reweigh & joint & gender & 0.531 & 0.546 & +0.015 [+0.005, +0.026]$^{*}$ \\
+reweigh & joint & international & 0.974 & 0.875 & -0.047 [-0.144, +0.076] \\
+reweigh & joint & scholarship & 0.251 & 0.323 & +0.073 [+0.055, +0.092]$^{*}$ \\
+reweigh & joint & special needs & 0.923 & 0.930 & +0.001 [-0.094, +0.096] \\
+reweigh & scholarship & age mature & 0.393 & 0.399 & +0.006 [-0.002, +0.015] \\
+reweigh & scholarship & gender & 0.531 & 0.525 & -0.006 [-0.015, +0.005] \\
+reweigh & scholarship & international & 0.974 & 0.918 & -0.020 [-0.098, +0.045] \\
+reweigh & scholarship & scholarship & 0.251 & 0.310 & +0.059 [+0.040, +0.075]$^{*}$ \\
+reweigh & scholarship & special needs & 0.923 & 0.928 & +0.003 [-0.070, +0.076] \\
+threshold eo & age_mature & age mature & 0.393 & 0.619 & +0.226 [+0.207, +0.248]$^{*}$ \\
+threshold eo & age_mature & gender & 0.531 & 0.593 & +0.061 [+0.041, +0.079]$^{*}$ \\
+threshold eo & age_mature & international & 0.974 & 0.935 & +0.004 [-0.087, +0.094] \\
+threshold eo & age_mature & scholarship & 0.251 & 0.331 & +0.080 [+0.056, +0.102]$^{*}$ \\
+threshold eo & age_mature & special needs & 0.923 & 0.917 & +0.014 [-0.086, +0.172] \\
+threshold eo & gender & age mature & 0.393 & 0.444 & +0.050 [+0.039, +0.065]$^{*}$ \\
+threshold eo & gender & gender & 0.531 & 0.722 & +0.192 [+0.174, +0.213]$^{*}$ \\
+threshold eo & gender & international & 0.974 & 0.903 & -0.018 [-0.101, +0.106] \\
+threshold eo & gender & scholarship & 0.251 & 0.302 & +0.051 [+0.034, +0.070]$^{*}$ \\
+threshold eo & gender & special needs & 0.923 & 0.936 & +0.016 [-0.095, +0.163] \\
+threshold eo & joint & age mature & 0.393 & 0.561 & +0.167 [+0.147, +0.188]$^{*}$ \\
+threshold eo & joint & gender & 0.531 & 0.781 & +0.251 [+0.222, +0.279]$^{*}$ \\
+threshold eo & joint & international & 0.974 & 0.948 & +0.019 [-0.080, +0.173] \\
+threshold eo & joint & scholarship & 0.251 & 0.646 & +0.397 [+0.362, +0.441]$^{*}$ \\
+threshold eo & joint & special needs & 0.923 & 0.856 & +0.006 [-0.152, +0.229] \\
+threshold eo & scholarship & age mature & 0.393 & 0.512 & +0.119 [+0.103, +0.135]$^{*}$ \\
+threshold eo & scholarship & gender & 0.531 & 0.615 & +0.086 [+0.065, +0.104]$^{*}$ \\
+threshold eo & scholarship & international & 0.974 & 0.984 & +0.023 [-0.067, +0.166] \\
+threshold eo & scholarship & scholarship & 0.251 & 0.607 & +0.358 [+0.318, +0.400]$^{*}$ \\
+threshold eo & scholarship & special needs & 0.923 & 0.953 & +0.021 [-0.129, +0.186] \\
+\bottomrule
+\end{tabular}
+\end{table}

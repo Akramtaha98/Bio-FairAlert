@@ -753,6 +753,7 @@ def parse():
     p.add_argument("--out", default="../results/uci697", help="output folder (run from src/)")
     p.add_argument("--data_dir", default="../data/uci697", help="download cache for data.csv")
     p.add_argument("--stages", default="main,ksweep,fairness,explain")
+    p.add_argument("--drop", default="", help="comma-separated feature names to remove (timing-sensitivity analysis)")
     p.add_argument("--repeats", type=int, default=5)
     p.add_argument("--folds", type=int, default=5)
     p.add_argument("--k", type=int, default=12, help="MI top-k (paper default 12)")
@@ -792,6 +793,11 @@ def main():
     t0 = time.time()
     df = load_data(a.data, a.data_dir)
     feat = [c for c in df.columns if c != "Target"]
+    if a.drop:
+        drop = [d.strip() for d in a.drop.split(",") if d.strip()]
+        missing = [d for d in drop if d not in feat]
+        assert not missing, f"--drop: unknown features {missing}"
+        feat = [c for c in feat if c not in drop]
     y3 = df["Target"].map(LABELS).values.astype(int)
     yb = (y3 == 0).astype(int)                       # at-risk = Dropout
     X = df[feat].values.astype(float)

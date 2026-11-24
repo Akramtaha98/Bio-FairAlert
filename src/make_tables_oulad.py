@@ -67,21 +67,21 @@ def tab_cells(res, out):
     rows = []
     srcs = [("Held-out, day 25", f"{res}/oulad_heldout/heldout_C25_cells.csv"),
             ("Held-out, day 50", f"{res}/oulad_heldout/heldout_C50_cells.csv"),
-            ("Repeated CV, day 75", f"{res}/oulad_cv_gender/cv_C75_cells.csv")]
+            ("Repeated CV, day 75", f"{res}/oulad_cv_sameday/cv_C75_cells.csv")]
     for nm, p in srcs:
         c = pd.read_csv(p)
         c = c[(c.method == "baseline") & (c.grouping == "gi")]
         rows.append(f"\\multicolumn{{6}}{{l}}{{\\emph{{{nm}}}}} \\\\")
         for cell in c.cell.unique():
             x = c[c.cell == cell].set_index("metric")
-            lab = cell.replace("F/", "Women, ").replace("M/", "Men, ").replace("IMD<30%", "IMD $<$ 30\\%").replace("IMD>=30%", "IMD $\\geq$ 30\\%")
+            lab = cell.replace("F/", "Women, ").replace("M/", "Men, ").replace("IMD<30%", "IMD $<$ 30\\%").replace("IMD>=30%", "IMD $\\geq$ 30\\%").replace("IMD unknown", "IMD unknown")
             rows.append(" & ".join([lab, f"{int(x.loc['tpr', 'n']):,}", f"{int(x.loc['tpr', 'pos']):,}",
                 f"{x.loc['tpr', 'value']:.3f} [{x.loc['tpr', 'lo']:.3f}, {x.loc['tpr', 'hi']:.3f}]",
                 f"{x.loc['fpr', 'value']:.3f} [{x.loc['fpr', 'lo']:.3f}, {x.loc['fpr', 'hi']:.3f}]"]) + " \\\\")
         rows.append("\\addlinespace")
     tex = ("\\begin{table}[t]\n\\centering\\small\n\\caption{OULAD gender$\\times$deprivation cells (baseline model; 95\\% student-bootstrap intervals). "
-           "$n$ = students (rows), Pos = students who failed or withdrew. The cell detected least is women in less deprived areas; women in the most deprived areas "
-           "have the highest false-alert rate.}\n\\label{tab:oulad_cells}\n\\begin{tabular}{lrrcc}\n\\toprule\nCell & $n$ & Pos & TPR & FPR \\\\\n\\midrule\n"
+           "$n$ = students (rows), Pos = students who failed or withdrew. Among students with known IMD, the cell detected least is women with IMD $\\geq$ 30\\%, and women with IMD $<$ 30\\% receive the most false alerts; "
+           "cells with unknown IMD are small and imprecise.}\n\\label{tab:oulad_cells}\n\\begin{tabular}{lrrcc}\n\\toprule\nCell & $n$ & Pos & TPR & FPR \\\\\n\\midrule\n"
            + "\n".join(rows).replace("\\multicolumn{6}{l}", "\\multicolumn{5}{l}") + "\n\\bottomrule\n\\end{tabular}\n\\end{table}\n")
     open(f"{out}/tab_oulad_cells.tex", "w").write(tex)
 
@@ -137,12 +137,6 @@ def tab_sameday(res, out):
     rows = []
     r = [base(d, "ALL", "macro_f1") for d in cols]
     rows.append("Macro-F1 & " + " & ".join(f"{x.value:.3f} [{x.lo:.3f}, {x.hi:.3f}]" for x in r) + " \\\\")
-    dif = []
-    for i in (0, 2):
-        a, b = r[i], r[i + 1]
-        se = np.hypot((a.hi - a.lo) / 3.92, (b.hi - b.lo) / 3.92)
-        dif.append(f"\\multicolumn{{2}}{{c}}{{{a.value - b.value:+.3f} [{a.value - b.value - 1.96 * se:+.3f}, {a.value - b.value + 1.96 * se:+.3f}]}}")
-    rows.append("CV minus held-out (approx.) & " + " & ".join(dif) + " \\\\")
     rows.append("\\addlinespace")
     for g, m, lab in [("gender", "dir", "Gender DIR"), ("gender", "eo", "Gender EO diff."), ("imd_band", "dir", "IMD DIR"), ("imd_band", "eo", "IMD EO diff."), ("gi", "eo", "Gender$\\times$IMD$<$30\\% EO diff.")]:
         rows.append(f"{lab} & " + " & ".join(f"{base(d, g, m).value:.3f}" for d in cols) + " \\\\")
@@ -152,7 +146,7 @@ def tab_sameday(res, out):
         rows.append(f"{lab} & " + " & ".join(tgt(d, fam) for d in cols) + " \\\\")
     tex = ("\\begin{table}[t]\n\\centering\\tiny\n\\caption{Random-split cross-validation against the held-out presentation at the same prediction day, with the same binary outcome, features, "
            "MI top-12 LightGBM, and a macro-F1-maximising decision threshold tuned on a disjoint calibration or validation split. CV: $5\\times5$ student-grouped folds over all presentations; "
-           "held-out: train 2013B+2013J, tune 2014B, test 2014J (primary seed). Intervals are conditional student-bootstrap intervals; the difference interval treats the two estimates as independent and is approximate. "
+           "held-out: train 2013B+2013J, tune 2014B, test 2014J (primary seed). Intervals are conditional student-bootstrap intervals. "
            "The designs also differ in training-set size and cohort mix, so the difference is not attributable to presentation shift alone.}\n\\label{tab:sameday}\n"
            "\\resizebox{\\textwidth}{!}{\\begin{tabular}{lcccc}\n\\toprule\n & \\multicolumn{2}{c}{Day 25} & \\multicolumn{2}{c}{Day 50} \\\\\n"
            " & Random CV & Held-out & Random CV & Held-out \\\\\n\\midrule\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}}\n\\end{table}\n")

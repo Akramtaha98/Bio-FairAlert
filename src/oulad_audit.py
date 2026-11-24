@@ -169,6 +169,7 @@ def fit_methods(X, y, g, tr, thr_idx, cal_idx, te, cols, targets, a, seed, use_t
                 pp = pt.astype(float)
             out[f"threshold_eo[{t}]"] = (pt.astype(np.int8), pp.astype(np.float32))
         except Exception as e:
+            if isinstance(e,(TypeError,ImportError,AttributeError)): raise
             log(f"  threshold_eo[{t}] failed: {e}")
         if a.inproc:
             try:
@@ -185,6 +186,7 @@ def fit_methods(X, y, g, tr, thr_idx, cal_idx, te, cols, targets, a, seed, use_t
                     ppe = pe.astype(float)
                 out[f"expgrad_eo[{t}]"] = (pe.astype(np.int8), ppe.astype(np.float32))
             except Exception as e:
+                if isinstance(e,(TypeError,ImportError,AttributeError)): raise
                 log(f"  expgrad_eo[{t}] failed: {e}")
     return out
 

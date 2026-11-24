@@ -1,0 +1,58 @@
+checkpoint,feature,selection_freq
+C0,Application mode,1.0
+C0,Course,1.0
+C0,Previous qualification (grade),1.0
+C0,Tuition fees up to date,1.0
+C0,Scholarship holder,1.0
+C0,Age at enrollment,1.0
+C0,Admission grade,0.96
+C0,Debtor,0.88
+C0,Gender,0.88
+C0,Mother's occupation,0.76
+C0,Previous qualification,0.6
+C0,Father's occupation,0.52
+C0,Mother's qualification,0.48
+C0,Father's qualification,0.44
+C0,Marital status,0.16
+C0,Daytime/evening attendance,0.12
+C0,Application order,0.04
+C0,Unemployment rate,0.04
+C0,Displaced,0.04
+C0,Nationality,0.04
+C0,GDP,0.04
+C1,Application mode,1.0
+C1,Course,1.0
+C1,Tuition fees up to date,1.0
+C1,Age at enrollment,1.0
+C1,Curricular units 1st sem (enrolled),1.0
+C1,Curricular units 1st sem (evaluations),1.0
+C1,Curricular units 1st sem (approved),1.0
+C1,Curricular units 1st sem (grade),1.0
+C1,Previous qualification (grade),0.96
+C1,Scholarship holder,0.96
+C1,Mother's occupation,0.44
+C1,Debtor,0.4
+C1,Admission grade,0.36
+C1,Previous qualification,0.28
+C1,Father's occupation,0.16
+C1,Gender,0.16
+C1,Displaced,0.08
+C1,Father's qualification,0.08
+C1,Mother's qualification,0.08
+C1,Application order,0.04
+C2,Tuition fees up to date,1.0
+C2,Curricular units 1st sem (evaluations),1.0
+C2,Curricular units 1st sem (approved),1.0
+C2,Curricular units 1st sem (grade),1.0
+C2,Curricular units 2nd sem (evaluations),1.0
+C2,Curricular units 2nd sem (approved),1.0
+C2,Curricular units 2nd sem (grade),1.0
+C2,Course,0.96
+C2,Application mode,0.8
+C2,Scholarship holder,0.76
+C2,Curricular units 2nd sem (enrolled),0.76
+C2,Age at enrollment,0.76
+C2,Curricular units 1st sem (enrolled),0.56
+C2,Previous qualification (grade),0.28
+C2,Debtor,0.08
+C2,Father's qualification,0.04

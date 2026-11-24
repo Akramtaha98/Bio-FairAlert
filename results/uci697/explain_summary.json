@@ -1,0 +1,9 @@
+{
+  "checkpoint": "C2",
+  "folds": 25,
+  "shap_rank_stability_spearman_mean": 0.8392443631931751,
+  "shap_rank_stability_spearman_min": 0.5837294332723949,
+  "top5_jaccard_mean": 0.6619047619047619,
+  "shap_vs_permutation_spearman_mean": 0.7594405594405597,
+  "shap_vs_permutation_spearman_sd": 0.1104954116036488
+}

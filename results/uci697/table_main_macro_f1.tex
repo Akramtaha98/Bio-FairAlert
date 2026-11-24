@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\caption{UCI-697 external validation: macro\_f1 (mean and 95\% Nadeau--Bengio CI, 5 repeats $\times$ 5 folds).}
+\label{tab:uci697_macro_f1}
+\begin{tabular}{llccc}
+\toprule
+Model & Feature filter & C0 (enrolment) & C1 (+1st sem.) & C2 (+2nd sem.) \\
+\midrule
+RandomForest & No filter & 0.547 [0.525, 0.569] & 0.668 [0.647, 0.689] & 0.707 [0.692, 0.723] \\
+RandomForest & MI top-12 & 0.537 [0.518, 0.555] & 0.664 [0.643, 0.684] & 0.698 [0.681, 0.716] \\
+\addlinespace
+XGBoost & No filter & 0.575 [0.552, 0.598] & 0.690 [0.671, 0.708] & 0.726 [0.709, 0.742] \\
+XGBoost & MI top-12 & 0.554 [0.535, 0.573] & 0.672 [0.654, 0.691] & 0.699 [0.684, 0.714] \\
+\addlinespace
+LightGBM & No filter & 0.569 [0.547, 0.590] & 0.683 [0.667, 0.699] & 0.719 [0.704, 0.734] \\
+LightGBM & MI top-12 & 0.546 [0.527, 0.566] & 0.665 [0.647, 0.684] & 0.695 [0.678, 0.713] \\
+\addlinespace
+Hybrid-Stack & No filter & 0.574 [0.555, 0.593] & 0.694 [0.677, 0.712] & 0.724 [0.707, 0.740] \\
+Hybrid-Stack & MI top-12 & 0.550 [0.533, 0.567] & 0.677 [0.658, 0.696] & 0.705 [0.689, 0.722] \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\end{table}

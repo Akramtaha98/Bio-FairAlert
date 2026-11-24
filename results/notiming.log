@@ -1,0 +1,16 @@
+[19:18:24] data (4424, 37); classes {np.int64(0): np.int64(1421), np.int64(1): np.int64(794), np.int64(2): np.int64(2209)}; at-risk rate 0.321
+[19:18:24]   group gender: 0: n=2868 atrisk=0.251, 1: n=1556 atrisk=0.451
+[19:18:24]   group age_mature: 0: n=3047 atrisk=0.227, 1: n=1377 atrisk=0.529
+[19:18:24]   group scholarship: 0: n=3325 atrisk=0.387, 1: n=1099 atrisk=0.122
+[19:18:24]   group special_needs: 0: n=4373 atrisk=0.321, 1: n=51 atrisk=0.333
+[19:18:24]   group international: 0: n=4314 atrisk=0.322, 1: n=110 atrisk=0.291
+[19:18:24]   checkpoints: C0=22 feats, C1=28 feats, C2=34 feats
+[19:18:24] [main] 15 folds x 3 ckpts x 1 filters x 1 models
+[Parallel(n_jobs=2)]: Using backend LokyBackend with 2 concurrent workers.
+[Parallel(n_jobs=2)]: Done  15 out of  15 | elapsed:   17.1s finished
+[19:18:41] [fairness] 15 folds x 3 ckpts; targets=['gender', 'age_mature', 'scholarship'] joint=['gender', 'scholarship']
+[Parallel(n_jobs=2)]: Using backend LokyBackend with 2 concurrent workers.
+[Parallel(n_jobs=2)]: Done  15 out of  15 | elapsed:   36.5s finished
+[19:19:18] [fairness] bootstrap deltas
+[19:19:27] [fairness] intersectional audit
+[19:19:27] done in 1.0 min -> /home/claude/res/uci697_notiming/

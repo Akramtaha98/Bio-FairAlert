@@ -1,0 +1,63 @@
+== significant worsenings (raw): 10
+checkpoint       family     target       audited  metric  delta     lo     hi     p  p_holm  q_bh
+        C0      reweigh     gender    age_mature     dir -0.009 -0.017 -0.000 0.038   1.000 0.211
+        C0   expgrad_eo     gender    age_mature     dir -0.008 -0.014 -0.001 0.023   1.000 0.144
+        C0   expgrad_eo      joint    age_mature     dir -0.009 -0.017 -0.001 0.029   1.000 0.173
+        C0 threshold_eo age_mature        gender eo_diff  0.036  0.015  0.057 0.001   0.537 0.013
+        C1      reweigh     gender    age_mature tpr_gap  0.009  0.000  0.019 0.050   1.000 0.255
+        C1      reweigh     gender    age_mature eo_diff  0.009  0.000  0.019 0.050   1.000 0.255
+        C2 threshold_eo     gender international eo_diff  0.061  0.005  0.087 0.031   1.000 0.182
+        C2 threshold_eo age_mature        gender eo_diff  0.028  0.011  0.042 0.005   1.000 0.040
+        C2 threshold_eo      joint international tpr_gap  0.083  0.016  0.123 0.020   1.000 0.129
+        C2 threshold_eo      joint international eo_diff  0.084  0.015  0.116 0.020   1.000 0.130
+raw worse 10 better 69
+holm worse 0 better 40
+bh worse 2 better 51
+worse point estimates: 177 of 405 ; large groups: 48 of 189
+median |delta| of sig worse: 0.019  max: 0.084
+== cells C0/C2 threshold joint
+checkpoint                  cell    n  dropouts  tpr_base  tpr_after  fpr_base  fpr_after  extra_detect_per1000  extra_false_alerts_per1000  extra_contacted_per1000
+        C0 Woman, no scholarship 2001       631     0.583      0.534     0.173      0.242               -15.292                      47.276                      NaN
+        C0    Woman, scholarship  867        89     0.279      0.463     0.028      0.253                18.916                     202.768                      NaN
+        C0   Man, no scholarship 1324       656     0.709      0.529     0.407      0.255               -89.426                     -76.888                      NaN
+        C0      Man, scholarship  232        45     0.293      0.427     0.087      0.245                25.862                     127.586                      NaN
+        C0                   ALL 4424      1421       NaN        NaN       NaN        NaN                   NaN                         NaN                   16.184
+        C2 Woman, no scholarship 2001       631     0.761      0.703     0.096      0.143               -18.191                      32.284                      NaN
+        C2    Woman, scholarship  867        89     0.508      0.649     0.030      0.138                14.533                      96.886                      NaN
+        C2   Man, no scholarship 1324       656     0.787      0.702     0.181      0.137               -42.296                     -22.356                      NaN
+        C2      Man, scholarship  232        45     0.604      0.591     0.070      0.154                -2.586                      68.103                      NaN
+        C2                   ALL 4424      1421       NaN        NaN       NaN        NaN                   NaN                         NaN                   12.297
+== criteria C0 threshold & reweigh
+checkpoint       family      target     f1   dir  tpr_gap  fpr_gap  eo_diff  eo_diff_base  eo_diff_lo  eo_diff_hi
+        C0      reweigh      gender -0.002 0.149   -0.091   -0.116   -0.116         0.217      -0.127      -0.103
+        C0      reweigh  age_mature -0.012 0.166   -0.151   -0.177   -0.151         0.350      -0.168      -0.135
+        C0      reweigh scholarship -0.004 0.196   -0.135   -0.101   -0.135         0.364      -0.168      -0.103
+        C0      reweigh       joint -0.004 0.144   -0.168   -0.185   -0.168         0.434      -0.215      -0.133
+        C0 threshold_eo      gender -0.026 0.309   -0.122   -0.193   -0.184         0.217      -0.199      -0.149
+        C0 threshold_eo  age_mature -0.060 0.461   -0.330   -0.268   -0.328         0.350      -0.349      -0.275
+        C0 threshold_eo scholarship -0.054 0.570   -0.284   -0.195   -0.283         0.364      -0.320      -0.224
+        C0 threshold_eo       joint -0.081 0.561   -0.302   -0.336   -0.302         0.434      -0.366      -0.236
+        C2      reweigh      gender -0.001 0.018   -0.013   -0.012   -0.012         0.085      -0.018      -0.005
+        C2      reweigh  age_mature -0.005 0.067   -0.057   -0.055   -0.057         0.203      -0.067      -0.047
+        C2      reweigh scholarship -0.003 0.055   -0.039   -0.025   -0.039         0.234      -0.058      -0.023
+        C2      reweigh       joint -0.002 0.038   -0.064   -0.036   -0.064         0.279      -0.086      -0.029
+        C2 threshold_eo      gender -0.032 0.164   -0.024   -0.073   -0.059         0.085      -0.075      -0.026
+        C2 threshold_eo  age_mature -0.048 0.240   -0.189   -0.070   -0.187         0.203      -0.214      -0.122
+        C2 threshold_eo scholarship -0.045 0.265   -0.160   -0.077   -0.160         0.234      -0.192      -0.116
+        C2 threshold_eo       joint -0.054 0.292   -0.146   -0.127   -0.146         0.279      -0.224      -0.042
+== four-cell baseline + intersect per-ckpt baseline: tpr/fpr/flag by cell
+C0                  cell    n  dropouts  tpr_base  fpr_base  flag_base
+Woman, no scholarship 2001       631     0.583     0.173      0.302
+   Woman, scholarship  867        89     0.279     0.028      0.053
+  Man, no scholarship 1324       656     0.709     0.407      0.557
+     Man, scholarship  232        45     0.293     0.087      0.127
+C1                  cell    n  dropouts  tpr_base  fpr_base  flag_base
+Woman, no scholarship 2001       631     0.739     0.119      0.314
+   Woman, scholarship  867        89     0.396     0.035      0.072
+  Man, no scholarship 1324       656     0.777     0.199      0.486
+     Man, scholarship  232        45     0.516     0.083      0.167
+C2                  cell    n  dropouts  tpr_base  fpr_base  flag_base
+Woman, no scholarship 2001       631     0.761     0.096      0.306
+   Woman, scholarship  867        89     0.508     0.030      0.079
+  Man, no scholarship 1324       656     0.787     0.181      0.481
+     Man, scholarship  232        45     0.604     0.070      0.173

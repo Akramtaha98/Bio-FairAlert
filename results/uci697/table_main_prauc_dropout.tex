@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\caption{UCI-697 external validation: prauc\_dropout (mean and 95\% Nadeau--Bengio CI, 5 repeats $\times$ 5 folds).}
+\label{tab:uci697_prauc_dropout}
+\begin{tabular}{llccc}
+\toprule
+Model & Feature filter & C0 (enrolment) & C1 (+1st sem.) & C2 (+2nd sem.) \\
+\midrule
+RandomForest & No filter & 0.732 [0.712, 0.752] & 0.854 [0.841, 0.866] & 0.879 [0.867, 0.892] \\
+RandomForest & MI top-12 & 0.715 [0.694, 0.736] & 0.843 [0.826, 0.860] & 0.870 [0.857, 0.883] \\
+\addlinespace
+XGBoost & No filter & 0.735 [0.714, 0.757] & 0.861 [0.847, 0.875] & 0.887 [0.874, 0.900] \\
+XGBoost & MI top-12 & 0.716 [0.694, 0.737] & 0.843 [0.824, 0.862] & 0.868 [0.855, 0.881] \\
+\addlinespace
+LightGBM & No filter & 0.729 [0.709, 0.750] & 0.859 [0.844, 0.873] & 0.885 [0.873, 0.897] \\
+LightGBM & MI top-12 & 0.704 [0.681, 0.726] & 0.837 [0.818, 0.856] & 0.863 [0.847, 0.878] \\
+\addlinespace
+Hybrid-Stack & No filter & 0.737 [0.717, 0.757] & 0.858 [0.845, 0.872] & 0.883 [0.870, 0.896] \\
+Hybrid-Stack & MI top-12 & 0.719 [0.699, 0.740] & 0.843 [0.826, 0.861] & 0.869 [0.856, 0.883] \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\end{table}

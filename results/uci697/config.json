@@ -1,0 +1,58 @@
+{
+  "data": null,
+  "out": "../results/uci697",
+  "data_dir": "../data/uci697",
+  "stages": [
+    "main",
+    "ksweep",
+    "fairness",
+    "explain"
+  ],
+  "repeats": 5,
+  "folds": 5,
+  "k": 12,
+  "seed": 2026,
+  "n_jobs": 16,
+  "n_estimators": 300,
+  "models": [
+    "RandomForest",
+    "XGBoost",
+    "LightGBM",
+    "Hybrid-Stack"
+  ],
+  "filters": [
+    "none",
+    "mi"
+  ],
+  "targets": [
+    "gender",
+    "age_mature",
+    "scholarship"
+  ],
+  "joint": [
+    "gender",
+    "scholarship"
+  ],
+  "fair_ckpts": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "explain_ckpt": "C2",
+  "tex_ckpt": "C2",
+  "boot": 500,
+  "eg_iter": 25,
+  "min_n": 20,
+  "no_inproc": false,
+  "gpu": false,
+  "quick": false,
+  "inproc": true,
+  "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "numpy": "2.5.5",
+  "pandas": "3.1.1",
+  "sklearn": "1.9.1",
+  "lightgbm": "4.7.0",
+  "xgboost": "3.4.1",
+  "fairlearn": "0.15.0"
+}

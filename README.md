@@ -155,25 +155,25 @@ Bio-FairAlert/
 | `mi_stacking.py` | Mutual-information feature selection and the four-base-learner stacking ensemble (Logistic Regression, Random Forest, XGBoost, LightGBM) for OULAD. |
 | `mooc_features.py`, `mooc_mi_stacking.py` | Equivalent feature engineering and stacking pipeline for the MOOC case study. |
 
-#### Model comparison 
+#### Model comparison
 
 | Script | Purpose |
 |---|---|
 | `repeated_cv_significance.py` | Repeated 3x3-fold CV of stacking vs. best individual base learner, both datasets, with Nadeau-Bengio corrected paired t-test and Holm correction. |
 | `analyze_repeated_cv.py` | Aggregates repeated-CV output into reported means, SDs, and corrected p-values. |
-| `make_plots_repeated_cv.py` | Generates Figures 3 and 6. |
+| `make_plots_repeated_cv.py` | Generates the repeated-CV figures. |
 | `alt_meta_test.py` | Alternative (LightGBM) meta-learner robustness check . |
 | `tuning_experiment.py` | Equal-budget hyperparameter tuning check at representative checkpoints . |
 | `baseline_experiment.py` | Majority-class and Explainable Boosting Machine reference baselines. |
 
-#### Fairness calibration 
+#### Fairness calibration
 
 | Script | Purpose |
 |---|---|
 | `fairness_calibration.py`, `fairness_calibration_imdband.py` | Original illustrative single-split disability-targeted and imd_band-targeted equalized-odds calibration (the single-split numbers quoted for comparison). |
 | `bootstrap_fairness.py` | Repeated 10-split version of both calibration runs; produces the mean and SD figures reported in Tables 2, 3, S1, S2. |
 | `fairness_missing_sensitivity.py` | Sensitivity check excluding students with missing imd_band data. |
-| `make_plots_bootstrap.py` | Generates Figure 4. |
+| `make_plots_bootstrap.py` | Generates the bootstrap-fairness figure. |
 
 #### Broader fairness panel
 
@@ -220,7 +220,7 @@ Output (CSV, LaTeX tables, `config.json`, `report.md`) is written to `results/uc
 
 | Script | Purpose |
 |---|---|
-| `make_arch_figures_v2.py` | Current figures: system architecture and intervention workflow (Figures 1, 2). |
+| `make_arch_figures_v2.py` | Current figures: system architecture and intervention workflow. |
 | `make_arch_figures.py` | Earlier version of the same two figures, kept for the record and superseded by `make_arch_figures_v2.py`. |
 | `make_plots.py` | Shared plotting helpers used by the scripts above. |
 

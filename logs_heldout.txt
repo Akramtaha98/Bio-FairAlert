@@ -1,1 +1,4 @@
 21:22:37 [heldout C25] train=10578 val=5962 test=9243  at-risk: 0.448/0.487/0.410
+21:23:14 bootstrap device: cpu
+21:23:21 [heldout_C25] side-effect family n=168: unadjusted worse=11 better=21; Holm<.05 worse=1 better=4; BH<.05 worse=2 better=6
+21:23:21 [heldout C50] train=10242 val=5759 test=8980  at-risk: 0.424/0.465/0.392

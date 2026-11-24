@@ -123,6 +123,42 @@ def tab_common(res, uci, out):
     open(f"{out}/tab_common_gender.tex", "w").write(tex)
 
 
+def tab_sameday(res, out):
+    """Random-split CV (threshold tuned on a calibration split) vs held-out presentation, same day, same procedure."""
+    cols = []
+    for ck in ["C25", "C50"]:
+        cols.append(pd.read_csv(f"{res}/oulad_cv_sameday/cv_{ck}_fairness.csv"))
+        cols.append(pd.read_csv(f"{res}/oulad_heldout/heldout_{ck}_fairness.csv"))
+    def base(d, g, m):
+        return d[(d.method == "baseline") & (d.grouping == g) & (d.metric == m)].iloc[0]
+    def tgt(d, fam):
+        r = d[(d.method == f"{fam}[gender]") & (d.grouping == "gender") & (d.metric == "eo")].iloc[0]
+        return f"{r.delta:+.3f} [{r.dlo:+.3f}, {r.dhi:+.3f}]"
+    rows = []
+    r = [base(d, "ALL", "macro_f1") for d in cols]
+    rows.append("Macro-F1 & " + " & ".join(f"{x.value:.3f} [{x.lo:.3f}, {x.hi:.3f}]" for x in r) + " \\\\")
+    dif = []
+    for i in (0, 2):
+        a, b = r[i], r[i + 1]
+        se = np.hypot((a.hi - a.lo) / 3.92, (b.hi - b.lo) / 3.92)
+        dif.append(f"\\multicolumn{{2}}{{c}}{{{a.value - b.value:+.3f} [{a.value - b.value - 1.96 * se:+.3f}, {a.value - b.value + 1.96 * se:+.3f}]}}")
+    rows.append("CV minus held-out (approx.) & " + " & ".join(dif) + " \\\\")
+    rows.append("\\addlinespace")
+    for g, m, lab in [("gender", "dir", "Gender DIR"), ("gender", "eo", "Gender EO diff."), ("imd_band", "dir", "IMD DIR"), ("imd_band", "eo", "IMD EO diff."), ("gi", "eo", "Gender$\\times$IMD$<$30\\% EO diff.")]:
+        rows.append(f"{lab} & " + " & ".join(f"{base(d, g, m).value:.3f}" for d in cols) + " \\\\")
+    rows.append("\\addlinespace")
+    rows.append("\\multicolumn{5}{l}{\\emph{Change in gender EO difference under gender-targeted mitigation}} \\\\")
+    for fam, lab in [("reweigh", "Reweighing"), ("expgrad_eo", "Exp.\\ gradient"), ("threshold_eo", "Threshold opt.")]:
+        rows.append(f"{lab} & " + " & ".join(tgt(d, fam) for d in cols) + " \\\\")
+    tex = ("\\begin{table}[t]\n\\centering\\tiny\n\\caption{Random-split cross-validation against the held-out presentation at the same prediction day, with the same binary outcome, features, "
+           "MI top-12 LightGBM, and a macro-F1-maximising decision threshold tuned on a disjoint calibration or validation split. CV: $5\\times5$ student-grouped folds over all presentations; "
+           "held-out: train 2013B+2013J, tune 2014B, test 2014J (primary seed). Intervals are conditional student-bootstrap intervals; the difference interval treats the two estimates as independent and is approximate. "
+           "The designs also differ in training-set size and cohort mix, so the difference is not attributable to presentation shift alone.}\n\\label{tab:sameday}\n"
+           "\\resizebox{\\textwidth}{!}{\\begin{tabular}{lcccc}\n\\toprule\n & \\multicolumn{2}{c}{Day 25} & \\multicolumn{2}{c}{Day 50} \\\\\n"
+           " & Random CV & Held-out & Random CV & Held-out \\\\\n\\midrule\n" + "\n".join(rows) + "\n\\bottomrule\n\\end{tabular}}\n\\end{table}\n")
+    open(f"{out}/tab_oulad_sameday.tex", "w").write(tex)
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--res", default="../results")
@@ -131,4 +167,6 @@ if __name__ == "__main__":
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     tab_heldout_base(a.res, a.out); tab_heldout_crit(a.res, a.out); tab_cells(a.res, a.out); tab_common(a.res, a.uci, a.out)
+    if os.path.isdir(f"{a.res}/oulad_cv_sameday"):
+        tab_sameday(a.res, a.out)
     print("wrote oulad tables")

@@ -5,3 +5,5 @@
 21:24:48   repeat 4/5
 21:25:01   repeat 5/5
 21:25:16 bootstrap device: cpu
+21:25:35 [cv_C75] side-effect family n=36: unadjusted worse=1 better=2; Holm<.05 worse=0 better=0; BH<.05 worse=0 better=0
+21:25:35 done in 1.5 min
